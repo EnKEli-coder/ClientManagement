@@ -1,0 +1,14 @@
+﻿
+.clients-view {
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: min-content min-content auto; 
+}
+
+.clients-view > h3 {
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: var(--bold);
+}
+
