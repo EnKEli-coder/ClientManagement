@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\source\\repos\\GestionClientes\\GestionClientes\\GestionClientes.csproj": {}
+    "D:\\Repos\\ClientManagement\\GestionClientes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\source\\repos\\GestionClientes\\GestionClientes\\GestionClientes.csproj": {
+    "D:\\Repos\\ClientManagement\\GestionClientes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\GestionClientes\\GestionClientes\\GestionClientes.csproj",
+        "projectUniqueName": "D:\\Repos\\ClientManagement\\GestionClientes.csproj",
         "projectName": "GestionClientes",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\GestionClientes\\GestionClientes\\GestionClientes.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\GestionClientes\\GestionClientes\\obj\\",
+        "projectPath": "D:\\Repos\\ClientManagement\\GestionClientes.csproj",
+        "packagesPath": "C:\\Users\\OMAR\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\ClientManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

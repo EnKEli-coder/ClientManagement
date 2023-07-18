@@ -1,0 +1,20 @@
+﻿.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/Search.svg);
+    filter: var(--primary-filter-dark);
+}
+
+.add-user-icon {
+    height: 16px;
+    width: 22px;
+    background-image: url(../images/AddUser.svg);
+    filter: var(--primary-filter-light);
+}
