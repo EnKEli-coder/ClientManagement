@@ -37,12 +37,12 @@
       "PackagePath": "staticwebassets\\images\\AddUser.svg"
     },
     {
-      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.png",
-      "PackagePath": "staticwebassets\\images\\History.png"
-    },
-    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.svg",
       "PackagePath": "staticwebassets\\images\\History.svg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Plus.svg",
+      "PackagePath": "staticwebassets\\images\\Plus.svg"
     },
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Search.svg",

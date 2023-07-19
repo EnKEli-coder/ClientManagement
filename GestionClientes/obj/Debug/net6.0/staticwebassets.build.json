@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LhL02+T/nbf22LiiI86IQrbHHHqUk/2W7xLctMJE7vw=",
+  "Hash": "ofGSqeg1gl1yyPGjCR+EPpwlJS5aCyxq0sm1C6sqHhQ=",
   "Source": "GestionClientes",
   "BasePath": "_content/GestionClientes",
   "Mode": "Default",
@@ -187,23 +187,6 @@
       "OriginalItemSpec": "wwwroot\\images\\AddUser.svg"
     },
     {
-      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.png",
-      "SourceId": "GestionClientes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
-      "BasePath": "_content/GestionClientes",
-      "RelativePath": "images/History.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\History.png"
-    },
-    {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.svg",
       "SourceId": "GestionClientes",
       "SourceType": "Discovered",
@@ -219,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\History.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Plus.svg",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "images/Plus.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Plus.svg"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Search.svg",

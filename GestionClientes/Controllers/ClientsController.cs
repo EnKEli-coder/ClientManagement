@@ -10,5 +10,10 @@ namespace GestionClientes.Controllers
         {
             return View();
         }
+
+        public ActionResult ClientsView()
+        {
+            return PartialView("Clients");
+        }
     }
 }
