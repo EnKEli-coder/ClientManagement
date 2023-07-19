@@ -1,9 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-
+﻿
 async function showClientsModule() {
     try {
         let main = document.querySelector(".main");
@@ -12,9 +7,6 @@ async function showClientsModule() {
     } catch (error) {
         console.log(error);
     }
-    
-
-
 }
 
 async function showOrdersModule() {
@@ -25,4 +17,12 @@ async function showOrdersModule() {
     } catch (error) {
         console.log(error);
     }
+}
+
+function cerrarModal() {
+    var container = document.querySelector(".container");
+    var modal = document.querySelector(".modal");
+
+    modal.innerHTML = "";
+    container.removeChild(modal);
 }

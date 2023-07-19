@@ -11,9 +11,14 @@ namespace GestionClientes.Controllers
             return View();
         }
 
-        public ActionResult ClientsView()
+        public async Task<ActionResult> ClientsView()
         {
             return PartialView("Clients");
+        }
+
+        public async Task<ActionResult> ClientInfo()
+        {
+            return PartialView("_ClientInfoModal");
         }
     }
 }

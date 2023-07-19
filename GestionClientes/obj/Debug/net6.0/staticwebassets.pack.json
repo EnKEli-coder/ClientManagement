@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GestionClientes.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientInfoModal.css",
+      "PackagePath": "staticwebassets\\css\\Clients\\ClientInfoModal.css"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientList.css",
       "PackagePath": "staticwebassets\\css\\Clients\\ClientList.css"
     },
@@ -33,8 +37,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\AddOrder.svg",
+      "PackagePath": "staticwebassets\\images\\AddOrder.svg"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\AddUser.svg",
       "PackagePath": "staticwebassets\\images\\AddUser.svg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Cross.svg",
+      "PackagePath": "staticwebassets\\images\\Cross.svg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Edit.svg",
+      "PackagePath": "staticwebassets\\images\\Edit.svg"
     },
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.svg",
@@ -45,8 +61,16 @@
       "PackagePath": "staticwebassets\\images\\Plus.svg"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Save.svg",
+      "PackagePath": "staticwebassets\\images\\Save.svg"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Search.svg",
       "PackagePath": "staticwebassets\\images\\Search.svg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Clients.js",
+      "PackagePath": "staticwebassets\\js\\Clients.js"
     },
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\site.js",

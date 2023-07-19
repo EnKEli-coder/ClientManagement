@@ -1,0 +1,70 @@
+﻿
+.client-info-modal {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    width: 880px;
+    gap: 15px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+
+.client-info-modal header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.client-info-modal header h1{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.client-info-modal .btn-close{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--red-color);
+    padding: 8px 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.client-info-modal .btn-close:hover {
+    background: var(--red-color-dark);
+}
+
+.client-info-modal nav {
+    display:flex;
+    gap: 24px;
+}
+
+.client-info-modal input[type=radio] {
+    display: none;
+}
+
+.client-info-modal label {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--gray-color);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    font-weight: var(--bold);
+    color: var(--black-color);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.client-info-modal input[type=radio]:checked + label {
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}

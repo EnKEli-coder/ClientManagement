@@ -9,7 +9,7 @@
 #order-list > li {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 5fr 2fr 2fr 5fr;
+    grid-template-columns: 1fr 4fr repeat(4,2fr);
     gap: 4px;
     padding: 9px 0;
     background: transparent;

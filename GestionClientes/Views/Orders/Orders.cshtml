@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="~/css/Orders/OrderList.css" asp-append-version="true" />
 
 <div class="orders-view">
-    <h3>Ordenes</h3>
+    <h3>Pedidos</h3>
     <section id="controls-section">
         <label>
             <span class="icon search-icon"></span>
@@ -11,17 +11,18 @@
         </label>
 
         <button>
-            <span class="icon add-user-icon"></span>
-            Nueva Orden
+            <span class="icon add-order-icon"></span>
+            Nuevo pedido
         </button>
     </section>
     <section id="list-section">
         <header id="list-header">
-            <span>No. asesor</span>
-            <span>Nombre</span>
-            <span>Tipo de cliente</span>
+            <span>Folio</span>
+            <span>Cliente</span>
+            <span>Monto</span>
+            <span>Fecha</span>
+            <span>Campaña</span>
             <span>Estado</span>
-            <span>Opciones</span>
         </header>
         <div id="list-frame">
             <partial name="~/Views/Orders/_OrderList.cshtml" />

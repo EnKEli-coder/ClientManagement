@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ofGSqeg1gl1yyPGjCR+EPpwlJS5aCyxq0sm1C6sqHhQ=",
+  "Hash": "pHyKXmN+B27+FOqoGkJr4ruGDouXC1qrt/7mIrFH4gk=",
   "Source": "GestionClientes",
   "BasePath": "_content/GestionClientes",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\GestionClientes.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientInfoModal.css",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "css/Clients/ClientInfoModal.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Clients\\ClientInfoModal.css"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientList.css",
@@ -170,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\AddOrder.svg",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "images/AddOrder.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\AddOrder.svg"
+    },
+    {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\AddUser.svg",
       "SourceId": "GestionClientes",
       "SourceType": "Discovered",
@@ -185,6 +219,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\AddUser.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Cross.svg",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "images/Cross.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Cross.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Edit.svg",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "images/Edit.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Edit.svg"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\History.svg",
@@ -221,6 +289,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Plus.svg"
     },
     {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Save.svg",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "images/Save.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Save.svg"
+    },
+    {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Search.svg",
       "SourceId": "GestionClientes",
       "SourceType": "Discovered",
@@ -236,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Search.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Clients.js",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "js/Clients.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Clients.js"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\site.js",
