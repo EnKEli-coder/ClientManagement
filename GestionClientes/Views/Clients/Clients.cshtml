@@ -1,0 +1,31 @@
+﻿@{
+}
+<link rel="stylesheet" href="~/css/Clients/Clients.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Clients/ClientList.css" asp-append-version="true" />
+
+<div class="clients-view">
+    <h3>Clientes</h3>
+    <section id="controls-section">
+        <label>
+            <span class="icon search-icon"></span>    
+            <input type="text" placeholder="Buscar cliente"/>
+        </label>
+       
+        <button>
+            <span class="icon add-user-icon"></span>
+            Nuevo Cliente
+        </button>
+    </section>
+    <section id="list-section">
+         <header id="list-header">
+             <span>No. asesor</span>
+             <span>Nombre</span>
+             <span>Tipo de cliente</span>
+             <span>Estado</span>
+             <span>Opciones</span>
+         </header>
+         <div id="list-frame">
+            <partial name="~/Views/Clients/_ClientList.cshtml" />
+         </div>    
+    </section>
+</div>

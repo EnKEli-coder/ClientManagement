@@ -1,0 +1,27 @@
+﻿
+<div class="orders-view">
+    <h3>Ordenes</h3>
+    <section id="controls-section">
+        <label>
+            <span class="icon search-icon"></span>
+            <input type="text" placeholder="Buscar orden" />
+        </label>
+
+        <button>
+            <span class="icon add-user-icon"></span>
+            Nueva Orden
+        </button>
+    </section>
+    <section id="list-section">
+        <header id="list-header">
+            <span>No. asesor</span>
+            <span>Nombre</span>
+            <span>Tipo de cliente</span>
+            <span>Estado</span>
+            <span>Opciones</span>
+        </header>
+        <div id="list-frame">
+            <partial name="~/Views/Orders/_OrderList.cshtml" />
+        </div>
+    </section>
+</div>
