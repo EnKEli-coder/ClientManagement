@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GestionClientesDatos/1.0.0": {
+        "dependencies": {
+          "GestionClientesEntidades": "1.0.0"
+        },
+        "runtime": {
+          "GestionClientesDatos.dll": {}
+        }
+      },
+      "GestionClientesEntidades/1.0.0": {
+        "runtime": {
+          "GestionClientesEntidades.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GestionClientesDatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GestionClientesEntidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

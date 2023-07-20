@@ -1,0 +1,17 @@
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesNegocio.deps.json
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesNegocio.dll
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesNegocio.pdb
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesDatos.dll
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesEntidades.dll
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesDatos.pdb
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\bin\Debug\net6.0\GestionClientesEntidades.pdb
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.csproj.CopyComplete
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.dll
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\refint\GestionClientesNegocio.dll
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\GestionClientesNegocio.pdb
+C:\Users\Usuario\source\repos\ClientManagement\GestionClientesNegocio\obj\Debug\net6.0\ref\GestionClientesNegocio.dll

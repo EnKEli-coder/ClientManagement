@@ -7,14 +7,55 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "GestionClientes/1.0.0": {
+        "dependencies": {
+          "GestionClientesEntidades": "1.0.0",
+          "GestionClientesNegocio": "1.0.0"
+        },
         "runtime": {
           "GestionClientes.dll": {}
+        }
+      },
+      "GestionClientesDatos/1.0.0": {
+        "dependencies": {
+          "GestionClientesEntidades": "1.0.0"
+        },
+        "runtime": {
+          "GestionClientesDatos.dll": {}
+        }
+      },
+      "GestionClientesEntidades/1.0.0": {
+        "runtime": {
+          "GestionClientesEntidades.dll": {}
+        }
+      },
+      "GestionClientesNegocio/1.0.0": {
+        "dependencies": {
+          "GestionClientesDatos": "1.0.0",
+          "GestionClientesEntidades": "1.0.0"
+        },
+        "runtime": {
+          "GestionClientesNegocio.dll": {}
         }
       }
     }
   },
   "libraries": {
     "GestionClientes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GestionClientesDatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GestionClientesEntidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GestionClientesNegocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

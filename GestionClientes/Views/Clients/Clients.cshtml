@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ClientsListModel
+
+@{
 }
 <link rel="stylesheet" href="~/css/Clients/Clients.css" asp-append-version="true" />
 
@@ -24,7 +26,7 @@
              <span>Opciones</span>
          </header>
          <div id="list-frame">
-            <partial name="~/Views/Clients/_ClientList.cshtml" />
+            <partial name="~/Views/Clients/_ClientList.cshtml" for="Clients"/>
          </div>    
     </section>
 </div>

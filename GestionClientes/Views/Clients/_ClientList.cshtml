@@ -1,288 +1,31 @@
-﻿
+﻿@using GestionClientesEntidades.Dto;
+@model List<Client>
+
 <link rel="stylesheet" href="~/css/Clients/ClientList.css" asp-append-version="true" />
 
-<ul id="client-list">
-    <li onclick="openClientInfo()">
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li onclick="openClientInfo()">
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li onclick="openClientInfo()">
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li><li>
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li><li>
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li><li>
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li><li>
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li><li>
-        <p class="clint-id">245</p>
-        <p class="name">Omar Enrique Romero Gomez</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">Sin pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">246</p>
-        <p class="name">Amiel Ylang Miranda Martinez</p>
-        <p class="client-type">Cliente</p>
-        <p class="order-state">2 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client">
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-    <li>
-        <p class="clint-id">247</p>
-        <p class="name">Amanda gabriel Quijano Torres</p>
-        <p class="client-type">Asesor</p>
-        <p class="order-state">7 pedidos</p>
-        <div class="client-controls">
-            <button class="btn-new-client"> 
-                <span class="icon add-icon"></span>
-                Nuevo Pedido
-            </button>
-            <button class="btn-order-history">
-                <span class="icon history-icon"></span>
-                Historial
-            </button>
-        </div>
-    </li>
-</ul>
+
+@if(Model != null)
+{
+    <ul id="client-list">
+        @foreach(Client client in Model)
+        {
+            <li onclick="openClientInfo(event)" id="@client.Id">
+                <p class="clint-id">@client.ConsultantId</p>
+                <p class="name">@client.Name</p>
+                <p class="client-type">@client.ConsultantType</p>
+                <p class="order-state">Sin pedidos</p>
+                <div class="client-controls">
+                    <button class="btn-new-client">
+                        <span class="icon add-icon"></span>
+                        Nuevo Pedido
+                    </button>
+                    <button class="btn-order-history">
+                        <span class="icon history-icon"></span>
+                        Historial
+                    </button>
+                </div>
+            </li>
+        }
+    </ul>
+}
+

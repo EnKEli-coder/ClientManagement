@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ViewComponents\" />
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GestionClientesEntidades\GestionClientesEntidades.csproj" />
+    <ProjectReference Include="..\GestionClientesNegocio\GestionClientesNegocio.csproj" />
   </ItemGroup>
 
 </Project>
