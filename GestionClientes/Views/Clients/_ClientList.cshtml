@@ -1,5 +1,6 @@
 ﻿@using GestionClientesEntidades.Dto;
-@model List<Client>
+@using GestionClientesEntidades.Models;
+@model List<ClientList>
 
 <link rel="stylesheet" href="~/css/Clients/ClientList.css" asp-append-version="true" />
 
@@ -7,13 +8,29 @@
 @if(Model != null)
 {
     <ul id="client-list">
-        @foreach(Client client in Model)
+        @foreach(ClientList client in Model)
         {
-            <li onclick="openClientInfo(event)" id="@client.Id">
-                <p class="clint-id">@client.ConsultantId</p>
+            <li onclick="openClientInfo(event)" id="@client.ID">
+                <p class="clint-id">@client.ConsultantID</p>
                 <p class="name">@client.Name</p>
                 <p class="client-type">@client.ConsultantType</p>
-                <p class="order-state">Sin pedidos</p>
+                @if(client.Pendientes > 0)
+                {
+                    if(client.Pendientes == 1)
+                    {
+                        <p class="order-state">1 pedido</p>
+                    }
+                    else
+                    {
+                        <p class="order-state">@client.Pendientes pedidos</p>
+                    }
+                    
+                }
+                else
+                {
+                    <p class="order-state">Sin pedidos</p>
+                }
+                
                 <div class="client-controls">
                     <button class="btn-new-client">
                         <span class="icon add-icon"></span>

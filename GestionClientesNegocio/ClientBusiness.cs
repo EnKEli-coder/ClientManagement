@@ -6,20 +6,21 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using GestionClientesDatos;
+using GestionClientesEntidades.Models;
 
 namespace GestionClientesNegocio
 {
     public static class ClientBusiness
     {
 
-        public static async Task<List<Client>> GetClients()
+        public static async Task<List<ClientList>> GetClients()
         {
-            return await ClientData.GetClientsAsync();
+            return await ClientData.GetClientListAsync();
         }
 
-        public static async Task<Client> GetClients(int clientId)
+        public static async Task<Client> GetClientInfo(int clientId)
         {
-            return await ClientData.GetClientByIdsAsync(clientId);
+            return await ClientData.GetClientById(clientId);
         }
     }
 }

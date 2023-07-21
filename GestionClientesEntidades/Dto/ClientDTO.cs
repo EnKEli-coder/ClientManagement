@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionClientesEntidades.Dto
 {
-    public class Client
+    public class ClientDTO
     {
         public int Id { get; set; }
         public int? ConsultantId { get; set; }

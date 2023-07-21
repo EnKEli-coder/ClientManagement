@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using GestionClientesEntidades.Dto;
 using GestionClientesNegocio;
 using GestionClientes.Models;
+using GestionClientesEntidades.Models;
 
 namespace GestionClientes.Controllers
 {
@@ -11,7 +12,7 @@ namespace GestionClientes.Controllers
         // GET: ClientsController
         public async Task<ActionResult> Clients()
         {
-            ClientsListModel clientsList = new ClientsListModel
+            ClientsListModel clientsList = new()
             {
                 Clients = await ClientBusiness.GetClients()
             };
@@ -21,17 +22,18 @@ namespace GestionClientes.Controllers
 
         public async Task<ActionResult> ClientsView()
         {
-            ClientsListModel clientsList = new ClientsListModel
+            ClientsListModel clientsList = new()
             {
                 Clients = await ClientBusiness.GetClients()
             };
             return PartialView("Clients", clientsList);
         }
-
+        [HttpPost]
         public async Task<ActionResult> ClientInfo(int clientId)
         {
+
             Client clientInfo = await ClientBusiness.GetClientInfo(clientId);
-            return PartialView("_ClientInfoModal");
+            return PartialView("_ClientInfoModal", clientInfo);
         }
     }
 }
