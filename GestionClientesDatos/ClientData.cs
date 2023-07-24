@@ -12,12 +12,16 @@ namespace GestionClientesDatos
 {
     public static class ClientData
     {
+
         public static async Task<List<ClientList>> GetClientListAsync()
         {
             List<ClientList> clients = new();
 
-            using (var context =  new ClientManagementContext())
+            using (var context = new ClientManagementContext())
             {
+                context.Database.EnsureCreated();
+                DbInitializer.Initialize(context);
+
                 clients = await context.ClientsList.ToListAsync();
             }
 
@@ -43,6 +47,28 @@ namespace GestionClientesDatos
                 throw;
             }
             
+        }
+
+        public static async Task UpdateClient(ClientDTO clientInfo)
+        {
+            using (var context = new ClientManagementContext())
+            {
+                Client? client = await context.Clients.Where(x => x.ID == clientInfo.ID).FirstOrDefaultAsync();
+                if (client != null)
+                {
+                    client.ConsultantId = clientInfo.ConsultantID;
+                    client.Name = clientInfo.Name != null ? clientInfo.Name : "";
+                    client.ConsultantType = clientInfo.ConsultantType;
+                    client.Telephone = clientInfo.Telephone;
+                    client.Email = clientInfo.Email;
+                    client.Address = clientInfo.Address;
+                    client.Password = clientInfo.Password;
+                    client.Observations = clientInfo.Observations;
+                }
+
+                await context.SaveChangesAsync();
+                
+            }
         }
     }
 }

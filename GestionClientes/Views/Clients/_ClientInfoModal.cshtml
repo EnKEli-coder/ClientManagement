@@ -5,11 +5,12 @@
 }
 
 <link rel="stylesheet" href="~/css/Clients/ClientInfoModal.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Clients/ClientForm.css" asp-append-version="true" />
 
 <div class="client-info-modal">
     <header>
         <h1>
-            Información de Omar Romero
+            Información de @Model.Name
         </h1>
         <button class="btn-close" onclick="cerrarModal()">
             <span class="icon cross-icon"></span>
@@ -27,6 +28,6 @@
         </label>
     </nav>
     <div class="content">
-
+        <partial name="~/views/Clients/_ClientDetail.cshtml" model="Model"></partial>
     </div>
 </div>

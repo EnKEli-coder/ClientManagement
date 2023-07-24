@@ -10,3 +10,15 @@ C:\Users\Usuario\source\repos\ClientManagement\GestionClientesEntidades\obj\Debu
 C:\Users\Usuario\source\repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\refint\GestionClientesEntidades.dll
 C:\Users\Usuario\source\repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.pdb
 C:\Users\Usuario\source\repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\ref\GestionClientesEntidades.dll
+D:\Repos\ClientManagement\GestionClientesEntidades\bin\Debug\net6.0\GestionClientesEntidades.deps.json
+D:\Repos\ClientManagement\GestionClientesEntidades\bin\Debug\net6.0\GestionClientesEntidades.dll
+D:\Repos\ClientManagement\GestionClientesEntidades\bin\Debug\net6.0\GestionClientesEntidades.pdb
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.csproj.AssemblyReference.cache
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.AssemblyInfoInputs.cache
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.AssemblyInfo.cs
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.csproj.CoreCompileInputs.cache
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.dll
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\refint\GestionClientesEntidades.dll
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\GestionClientesEntidades.pdb
+D:\Repos\ClientManagement\GestionClientesEntidades\obj\Debug\net6.0\ref\GestionClientesEntidades.dll

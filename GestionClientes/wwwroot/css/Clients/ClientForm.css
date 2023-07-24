@@ -1,0 +1,160 @@
+﻿#client-info-form{
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+}
+
+#client-details-section {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+        "name name name name name no no type"
+        "dir dir dir dir dir dir dir dir"
+        "email email email email pass pass phone phone"
+        "note note note note note note note note";
+}
+
+#client-details-section #name {
+    grid-area: name;
+}
+
+#client-details-section #number {
+    grid-area: no;
+}
+
+#client-details-section #type {
+    grid-area: type;
+}
+
+#client-details-section #direction {
+    grid-area: dir;
+}
+
+#client-details-section #email {
+    grid-area: email;
+}
+
+#client-details-section #password {
+    grid-area: pass;
+}
+
+#client-details-section #phone {
+    grid-area: phone;
+}
+
+#client-details-section #observations {
+    grid-area: note;
+}
+
+.form-field {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 5px;
+}
+
+.form-field label {
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    color: var(--black-color);
+}
+
+.form-field input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background: var(--white-color);
+    padding: 5px 12px;
+    color: var(--primary-color-dark);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    outline: none;
+}
+
+
+.form-field textarea {
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background: var(--white-color);
+    padding: 5px 12px;
+    color: var(--primary-color-dark);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    resize: none;
+    outline: none;
+}
+
+.form-field .select {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    color: var(--primary-color-dark);
+    cursor: pointer;
+    background: var(--white-color);
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    box-shadow: 0 0 0 2px #faffd7;
+}
+
+.form-field input:disabled, .form-field textarea:disabled, .form-field .select:disabled {
+    border: none;
+    background: var(--gray-color-light);
+    color: var(--gray-text);
+}
+
+#buttons-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#buttons-section button{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 8px 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buttons-section button:hover {
+    background: var(--primary-color-dark);
+}
+
+#buttons-section #btn-cancel {
+    background: var(--red-color);
+}
+
+#buttons-section #btn-cancel:hover {
+    background: var(--red-color-dark);
+}
+
+#client-info-form #btns-wrapper {
+    display: none;
+
+}
+
+#client-info-form.editable #btns-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#client-info-form.editable #btn-edit {
+    display: none;
+}

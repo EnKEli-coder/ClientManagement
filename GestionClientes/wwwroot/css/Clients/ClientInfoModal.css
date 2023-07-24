@@ -50,7 +50,7 @@
     display: none;
 }
 
-.client-info-modal label {
+.client-info-modal nav label {
     display:flex;
     align-items: center;
     justify-content: center;

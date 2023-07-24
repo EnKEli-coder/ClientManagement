@@ -22,5 +22,10 @@ namespace GestionClientesNegocio
         {
             return await ClientData.GetClientById(clientId);
         }
+
+        public static async Task UpdateClient(ClientDTO clientInfo)
+        {
+            await ClientData.UpdateClient(clientInfo);
+        }
     }
 }
