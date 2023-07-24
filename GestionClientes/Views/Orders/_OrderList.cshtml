@@ -1,35 +1,22 @@
-﻿
-<ul id="order-list">
-    <li>
-        <p class="order-id">24510</p>
-        <p class="client-name">Omar Enrique Romero Gomez</p>
-        <p class="Amount">$540.67</p>
-        <p class="date">27/10/2023</p>
-        <p class="campaing">Campaña 5</p>
-        <p class="state">Pendiente</p>
-    </li>
-    <li>
-        <p class="order-id">24510</p>
-        <p class="client-name">Omar Enrique Romero Gomez</p>
-        <p class="Amount">$540.67</p>
-        <p class="date">27/10/2023</p>
-        <p class="campaing">Campaña 5</p>
-        <p class="state">Pendiente</p>
-    </li>
-    <li>
-        <p class="order-id">24510</p>
-        <p class="client-name">Omar Enrique Romero Gomez</p>
-        <p class="Amount">$540.67</p>
-        <p class="date">27/10/2023</p>
-        <p class="campaing">Campaña 5</p>
-        <p class="state">Pendiente</p>
-    </li>
-    <li>
-        <p class="order-id">24510</p>
-        <p class="client-name">Omar Enrique Romero Gomez</p>
-        <p class="Amount">$540.67</p>
-        <p class="date">27/10/2023</p>
-        <p class="campaing">Campaña 5</p>
-        <p class="state">Pendiente</p>
-    </li>
-</ul>   
+﻿@using GestionClientesEntidades.Dto;
+@using GestionClientesEntidades.Models;
+@using System.Globalization;
+
+@model List<OrderList>
+
+@if(Model != null)
+{
+    foreach (var order in Model)
+    {
+        <ul id="order-list">
+            <li id="@order.ID">
+                <p class="order-id">@order.OrderNumber</p>
+                <p class="client-name">@order.ClientName</p>
+                <p class="Amount">@string.Format("{0:C}", order.Total)</p>
+                <p class="date">@order.DateCreated.ToString("dd/MM/yyyy")</p>
+                <p class="campaing">Campaña @order.Campaign</p>
+                <p class="state">@order.State</p>
+            </li>
+        </ul>   
+    }
+}

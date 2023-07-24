@@ -10,7 +10,6 @@ namespace GestionClientes.Controllers
 {
     public class ClientsController : Controller
     {
-        // GET: ClientsController
         public async Task<ActionResult> Clients()
         {
             ClientsListModel clientsList = new()
@@ -30,9 +29,15 @@ namespace GestionClientes.Controllers
             return PartialView("Clients", clientsList);
         }
         [HttpPost]
-        public async Task<ActionResult> ClientInfo([FromBody] ClientInfoParams param)
+        public async Task<ActionResult> ClientModalDetails([FromBody] ClientInfoParams param)
         {
-            Client clientInfo = await ClientBusiness.GetClientInfo(param.ClientId);
+            Client client = await ClientBusiness.GetClientInfo(param.ClientId);
+            
+            ClientInfoModel clientInfo = new()
+            {
+                Client = client
+            };
+
             return PartialView("_ClientInfoModal", clientInfo);
         }
 
@@ -61,6 +66,23 @@ namespace GestionClientes.Controllers
         {
             await ClientBusiness.SaveNewClient(clientInfo);
             return new EmptyResult();
+        }
+        [HttpPost]
+        public async Task<ActionResult> ClientModalOrders([FromBody] ClientInfoParams param)
+        {
+            ClientOrdersModel clientOrders = new()
+            {
+                ClientId = param.ClientId,
+                ClientName = param.ClientName,
+                Orders = await OrderBusiness.GetClientOrders(param.ClientId)
+            };
+
+            ClientInfoModel clientInfo = new()
+            {
+                ClientOrders = clientOrders
+            };
+
+            return PartialView("_ClientInfoModal", clientInfo);
         }
     }
 }

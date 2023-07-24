@@ -10,7 +10,7 @@
     <ul id="client-list">
         @foreach(ClientList client in Model)
         {
-            <li onclick="openClientInfo(event)" id="@client.ID">
+            <li onclick="openClientInfo(@client.ID)" id="@client.ID">
                 <p class="clint-id">@client.ConsultantID</p>
                 <p class="name">@client.Name</p>
                 <p class="client-type">@client.ConsultantType</p>
@@ -36,7 +36,7 @@
                         <span class="icon add-icon"></span>
                         Nuevo Pedido
                     </button>
-                    <button class="btn-order-history">
+                    <button class="btn-order-history" onclick="openClientHistory(@client.ID, event)">
                         <span class="icon history-icon"></span>
                         Historial
                     </button>

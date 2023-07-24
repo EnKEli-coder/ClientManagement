@@ -1,4 +1,5 @@
-﻿
+﻿@model OrdersListModel
+
 <link rel="stylesheet" href="~/css/Orders/Orders.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/Orders/OrderList.css" asp-append-version="true" />
 
@@ -25,7 +26,7 @@
             <span>Estado</span>
         </header>
         <div id="list-frame">
-            <partial name="~/Views/Orders/_OrderList.cshtml" />
+            <partial name="~/Views/Orders/_OrderList.cshtml" for="@Model.Orders"/>
         </div>
     </section>
 </div>

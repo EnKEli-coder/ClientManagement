@@ -1,0 +1,6 @@
+﻿
+#client-orders {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+}

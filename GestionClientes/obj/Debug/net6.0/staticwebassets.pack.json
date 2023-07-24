@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\Clients\\ClientList.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientOrdersList.css",
+      "PackagePath": "staticwebassets\\css\\Clients\\ClientOrdersList.css"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\Clients.css",
       "PackagePath": "staticwebassets\\css\\Clients\\Clients.css"
     },
@@ -79,6 +83,10 @@
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Clients.js",
       "PackagePath": "staticwebassets\\js\\Clients.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Orders.js",
+      "PackagePath": "staticwebassets\\js\\Orders.js"
     },
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\site.js",

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GestionClientes.Models;
+using GestionClientesNegocio;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GestionClientes.Controllers
 {
@@ -9,9 +11,12 @@ namespace GestionClientes.Controllers
             return View();
         }
 
-        public ActionResult OrdersView()
+        public async Task<ActionResult> OrdersView()
         {
-            return PartialView("Orders");
+            OrdersListModel orders = new() {
+                Orders = await OrderBusiness.GetOrders()
+            };
+            return PartialView("Orders",orders);
         }
     }
 }

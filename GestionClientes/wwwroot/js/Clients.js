@@ -1,9 +1,8 @@
 ﻿
-async function openClientInfo(event) {
-    let clientId = parseInt(event.currentTarget.id)
+async function openClientInfo(clientId) {
     let container = document.querySelector(".container")
     try {
-        let response = await axios.post("/Clients/ClientInfo", {
+        let response = await axios.post("/Clients/ClientModalDetails", {
             clientId:clientId
         }, {
             header: { "Content-Type": "application/json"}
@@ -121,4 +120,19 @@ async function saveNewClient(e) {
 
     cerrarModal()
     await showClientsModule()
+}
+
+async function openClientHistory(clientId, e) {
+    e.stopPropagation()
+    let container = document.querySelector(".container")
+    try {
+        let response = await axios.post("/Clients/ClientModalOrders", {
+            clientId: clientId
+        }, {
+            header: { "Content-Type": "application/json" }
+        })
+        container.insertAdjacentHTML("beforeend", response.data)
+    } catch (error) {
+        console.log(error)
+    }
 }

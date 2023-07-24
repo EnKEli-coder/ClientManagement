@@ -28,11 +28,19 @@ namespace GestionClientesDatos.Data
                     eb.HasNoKey();
                     eb.ToView("vwClientsList");
                 });
+
+            modelBuilder.Entity<OrderList>(
+                eb =>
+                {
+                    eb.HasNoKey();
+                    eb.ToView("vwOrdersList");
+                });
         }
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ClientList> ClientsList { get; set; }
+        public DbSet<OrderList> OrdersList { get; set;}
     }
 }

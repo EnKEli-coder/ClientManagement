@@ -1,33 +1,51 @@
 ﻿@using GestionClientesEntidades.Models;
-@model Client
+@model ClientInfoModel
 @{
     Layout = "../Shared/_Modal.cshtml";
 }
 
 <link rel="stylesheet" href="~/css/Clients/ClientInfoModal.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/Clients/ClientForm.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Clients/ClientOrdersList.css" asp-append-version="true" />
 
-<div class="client-info-modal">
-    <header>
-        <h1>
-            Información de @Model.Name
-        </h1>
-        <button class="btn-close" onclick="cerrarModal()">
-            <span class="icon cross-icon"></span>
-            Cerrar
-        </button>
-    </header>
-    <nav>
-        <input type="radio" name="navigation" id="radio-details" checked/>
-        <label class="btn-details" for="radio-details">
-            Detalles
-        </label>
-        <input type="radio" name="navigation" id="radio-history"/>
-        <label class="btn-history" for="radio-history">
-            Historial de pedidos
-        </label>
-    </nav>
-    <div class="content">
-        <partial name="~/views/Clients/_ClientDetail.cshtml" model="Model"></partial>
+
+@if(Model != null)
+{
+    <div class="client-info-modal">
+        <header>
+            @if (Model.Client != null)
+            {
+                <h1>Información de @Model.Client.Name</h1>
+            }
+            else
+            {
+                <h1>Información de @Model.ClientOrders.ClientName</h1>
+            }
+            <button class="btn-close" onclick="cerrarModal()">
+                <span class="icon cross-icon"></span>
+                Cerrar
+            </button>
+        </header>
+        <nav>
+            <input type="radio" name="navigation" id="radio-details" checked />
+            <label class="btn-details" for="radio-details">
+                Detalles
+            </label>
+            <input type="radio" name="navigation" id="radio-history" />
+            <label class="btn-history" for="radio-history">
+                Historial de pedidos
+            </label>
+        </nav>
+        <div class="content">
+            @if (Model.Client != null)
+            {
+                <partial name="~/views/Clients/_ClientDetail.cshtml" model="Model.Client"></partial>
+            }
+            else
+            {
+                <partial name="~/views/Clients/_ClientOrders.cshtml" model="Model.ClientOrders"></partial>
+            }
+            
+        </div>
     </div>
-</div>
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cvxSRtQb1iuR2r0cPMB9H+JNxsGd7c63dEgW+QUltZs=",
+  "Hash": "wbiS0ie4kZuAWNr1lqxzqno5zn98w7Cc1dMpajICaWQ=",
   "Source": "GestionClientes",
   "BasePath": "_content/GestionClientes",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Clients\\ClientList.css"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\ClientOrdersList.css",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "css/Clients/ClientOrdersList.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Clients\\ClientOrdersList.css"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Clients\\Clients.css",
@@ -372,6 +389,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Clients.js"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Orders.js",
+      "SourceId": "GestionClientes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\",
+      "BasePath": "_content/GestionClientes",
+      "RelativePath": "js/Orders.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Orders.js"
     },
     {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\site.js",

@@ -48,47 +48,42 @@ namespace GestionClientesDatos
 
         public static async Task UpdateClient(ClientDTO clientInfo)
         {
-            using (var context = new ClientManagementContext())
+            using var context = new ClientManagementContext();
+            Client? client = await context.Clients.Where(x => x.ID == clientInfo.ID).FirstOrDefaultAsync();
+            if (client != null && clientInfo.Name != null)
             {
-                Client? client = await context.Clients.Where(x => x.ID == clientInfo.ID).FirstOrDefaultAsync();
-                if (client != null && clientInfo.Name != null)
-                {
-                    client.ConsultantId = clientInfo.ConsultantID;
-                    client.Name = clientInfo.Name;
-                    client.ConsultantType = clientInfo.ConsultantType;
-                    client.Telephone = clientInfo.Telephone;
-                    client.Email = clientInfo.Email;
-                    client.Address = clientInfo.Address;
-                    client.Password = clientInfo.Password;
-                    client.Observations = clientInfo.Observations;
-                }
-
-                await context.SaveChangesAsync();
-                
+                client.ConsultantId = clientInfo.ConsultantID;
+                client.Name = clientInfo.Name;
+                client.ConsultantType = clientInfo.ConsultantType;
+                client.Telephone = clientInfo.Telephone;
+                client.Email = clientInfo.Email;
+                client.Address = clientInfo.Address;
+                client.Password = clientInfo.Password;
+                client.Observations = clientInfo.Observations;
             }
+
+            await context.SaveChangesAsync();
         }
         
         public static async Task CreateClient(ClientDTO clientInfo)
         {
-            using (var context = new ClientManagementContext())
+            using var context = new ClientManagementContext();
+            if (clientInfo.Name != null)
             {
-                if (clientInfo.Name != null)
+                Client client = new()
                 {
-                    Client client = new Client()
-                    {
-                        ConsultantId = clientInfo.ConsultantID,
-                        Name = clientInfo.Name,
-                        ConsultantType = clientInfo.ConsultantType,
-                        Telephone = clientInfo.Telephone,
-                        Email = clientInfo.Email,
-                        Address = clientInfo.Address,
-                        Password = clientInfo.Password,
-                        Observations = clientInfo.Observations,
-                    };
+                    ConsultantId = clientInfo.ConsultantID,
+                    Name = clientInfo.Name,
+                    ConsultantType = clientInfo.ConsultantType,
+                    Telephone = clientInfo.Telephone,
+                    Email = clientInfo.Email,
+                    Address = clientInfo.Address,
+                    Password = clientInfo.Password,
+                    Observations = clientInfo.Observations,
+                };
 
-                    await context.AddAsync(client);
-                    await context.SaveChangesAsync();
-                }
+                await context.AddAsync(client);
+                await context.SaveChangesAsync();
             }
         }
     }
