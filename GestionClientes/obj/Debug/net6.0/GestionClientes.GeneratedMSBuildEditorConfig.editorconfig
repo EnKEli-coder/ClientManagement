@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GestionClientes
 build_property.RootNamespace = GestionClientes
-build_property.ProjectDir = D:\Repos\ClientManagement\GestionClientes\
+build_property.ProjectDir = C:\Users\Usuario\source\repos\ClientManagement\GestionClientes\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Repos\ClientManagement\GestionClientes
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\source\repos\ClientManagement\GestionClientes
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Clients/Clients.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Clients/Clients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xDbGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Clients/_ClientDetail.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Clients/_ClientDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xfQ2xpZW50RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Clients/_ClientInfoModal.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Clients/_ClientInfoModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xfQ2xpZW50SW5mb01vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Clients/_ClientList.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Clients/_ClientList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xfQ2xpZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Clients/_NewClientModal.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Clients/_NewClientModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xfTmV3Q2xpZW50TW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Orders/Orders.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Orders/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXE9yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Orders/_OrderList.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Orders/_OrderList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXF9PcmRlckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Shared/Error.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Shared/_Modal.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Shared/_Modal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/_ViewImports.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/_ViewStart.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repos/ClientManagement/GestionClientes/Views/Shared/_Layout.cshtml]
+[C:/Users/Usuario/source/repos/ClientManagement/GestionClientes/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lb9o5jiqmg

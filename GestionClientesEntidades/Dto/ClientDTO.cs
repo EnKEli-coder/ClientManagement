@@ -8,7 +8,7 @@ namespace GestionClientesEntidades.Dto
 {
     public class ClientDTO
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public int? ConsultantID{ get; set; }
         public string? Name { get; set; }
         public string? ConsultantType { get; set; }

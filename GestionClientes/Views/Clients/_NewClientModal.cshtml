@@ -1,5 +1,4 @@
-﻿@using GestionClientesEntidades.Models;
-@model Client
+﻿
 @{
     Layout = "../Shared/_Modal.cshtml";
 }
@@ -18,6 +17,54 @@
         </button>
     </header>
     <div class="content">
-        <partial name="~/views/Clients/_ClientDetail.cshtml" model="Model"></partial>
+        <section id="client-info-form" class="editable">
+            <div id="client-details-section">
+                <form id="form" onsubmit="saveNewClient(event)">
+                    <div class="form-field" id="name">
+                        <label id="name-label" for="name-input">Nombre*</label>
+                        <input type="text" id="name-input" class="client-form-field" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-field" id="number">
+                        <label id="number-label" for="number-input">Numero de Asesor</label>
+                        <input type="text" id="number-input" class="client-form-field" placeholder="Numero de asesor">
+                    </div>
+                    <div class="form-field" id="type">
+                        <label id="type-label" for="type-select">Tipo</label>
+                        <select id="type-select" class="client-form-field select">
+                            <option value="Asesor" selected>Asesor</option>
+                            <option value="Cliente">Cliente</option>
+                        </select>
+                    </div>
+                    <div class="form-field" id="direction">
+                        <label id="direction-label" for="direction-input">Dirección</label>
+                        <input type="text" id="direction-input" class="client-form-field" placeholder="Dirección">
+                    </div>
+                    <div class="form-field" id="email">
+                        <label id="email-label" for="email-input">Correo electrónico</label>
+                        <input type="email" id="email-input" class="client-form-field" placeholder="Correo electronico">
+                    </div>
+                    <div class="form-field" id="password">
+                        <label id="password-label" for="password-input">Contraseña</label>
+                        <input type="text" id="password-input" class="client-form-field" placeholder="Contraseña">
+                    </div>
+                    <div class="form-field" id="phone">
+                        <label id="phone-label" for="phone-input">Telefono</label>
+                        <input type="tel" id="phone-input" class="client-form-field" pattern="[0-9]{10}" placeholder="Numero de teléfono">
+                    </div>
+                    <div class="form-field" id="observations">
+                        <label id="observations-label" for="observations-textarea">Observaciones</label>
+                        <textarea id="observations-textarea" class="client-form-field" placeholder="Escriba sus observaciones"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div id="buttons-section">
+                <div id="btns-wrapper">
+                    <button type="submit" form="form" id="btn-save" onclick="addSubmittedState()">
+                        <span class="icon save-icon"></span>
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </section>
     </div>
 </div>

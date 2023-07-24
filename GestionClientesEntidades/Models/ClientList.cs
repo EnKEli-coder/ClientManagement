@@ -12,6 +12,6 @@ namespace GestionClientesEntidades.Models
         public int? ConsultantID { get; set; }
         public string? Name { get; set; }
         public string? ConsultantType { get; set;}
-        public int Pendientes { get; set; }
+        public int? Pendientes { get; set; }
     }
 }

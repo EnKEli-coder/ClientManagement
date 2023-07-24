@@ -4,7 +4,20 @@
     gap: 20px;
 }
 
-#client-details-section {
+/*#client-details-section {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+        "name name name name name no no type"
+        "dir dir dir dir dir dir dir dir"
+        "email email email email pass pass phone phone"
+        "note note note note note note note note";
+}*/
+
+#client-details-section #form {
     display: grid;
     grid-template-columns: repeat(8,1fr);
     column-gap: 20px;
@@ -17,35 +30,35 @@
         "note note note note note note note note";
 }
 
-#client-details-section #name {
+#client-details-section #form #name {
     grid-area: name;
 }
 
-#client-details-section #number {
+#client-details-section #form #number {
     grid-area: no;
 }
 
-#client-details-section #type {
+#client-details-section #form #type {
     grid-area: type;
 }
 
-#client-details-section #direction {
+#client-details-section #form #direction {
     grid-area: dir;
 }
 
-#client-details-section #email {
+#client-details-section #form #email {
     grid-area: email;
 }
 
-#client-details-section #password {
+#client-details-section #form #password {
     grid-area: pass;
 }
 
-#client-details-section #phone {
+#client-details-section #form #phone {
     grid-area: phone;
 }
 
-#client-details-section #observations {
+#client-details-section #form #observations {
     grid-area: note;
 }
 
@@ -71,6 +84,11 @@
     font-size: 1.4rem;
     font-weight: var(--bold);
     outline: none;
+}
+
+.form-field .submitted:invalid {
+    border: 1px solid var(--red-color);
+    box-shadow: 0 0 0 2px #e98383;
 }
 
 

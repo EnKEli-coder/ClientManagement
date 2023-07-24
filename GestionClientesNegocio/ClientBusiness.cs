@@ -27,5 +27,9 @@ namespace GestionClientesNegocio
         {
             await ClientData.UpdateClient(clientInfo);
         }
+        public static async Task SaveNewClient(ClientDTO clientInfo)
+        {
+            await ClientData.CreateClient(clientInfo);
+        }
     }
 }

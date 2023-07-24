@@ -47,13 +47,20 @@ namespace GestionClientes.Controllers
         public async Task<ActionResult> UpdateClient([FromBody] ClientDTO clientInfo)
         {
             await ClientBusiness.UpdateClient(clientInfo);
-            return Ok();
+            return new EmptyResult();
         }
 
         [HttpPost]
         public ActionResult OpenNewClient()
         {
             return PartialView("_NewClientModal");
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> SaveNewClient([FromBody] ClientDTO clientInfo)
+        {
+            await ClientBusiness.SaveNewClient(clientInfo);
+            return new EmptyResult();
         }
     }
 }

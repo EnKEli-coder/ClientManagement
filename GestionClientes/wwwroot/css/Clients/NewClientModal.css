@@ -1,0 +1,41 @@
+﻿.new-client-modal {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    width: 880px;
+    gap: 15px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+
+.new-client-modal header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-client-modal header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
+.new-client-modal .btn-close {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--red-color);
+    padding: 8px 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.new-client-modal .btn-close:hover {
+    background: var(--red-color-dark);
+}
