@@ -1,0 +1,22 @@
+﻿@using GestionClientesEntidades.Models;
+@model Product
+
+@if(Model != null)
+{
+    <li class="product-item" onfocus="itemFocus(event)" onblur="itemBlur(event)">
+        <input type="text" id="key-input" class="product-input" value="@Model.ProductKey" placeholder="Código">
+        <input type="text" id="description-input" class="product-input" value="@Model.ProductDescription" placeholder="Descripción">
+        <div id="quantity-controler">
+            <div class="circle-div">
+                <span class="icon minus-icon" onclick="quantitySustract()"></span>
+            </div>
+            <p id="quantity">@Model.Quantity</p>
+            <div class="circle-div">
+                <span class="icon add-icon" onclick="quantityAdd()"></span>
+            </div>
+        </div>
+        <input type="number" id="price-input" class="product-input" value="@String.Format("{0,C}", Model.ProductPrice)">
+        <span class="icon cross-icon"></span>
+    </li>
+}
+

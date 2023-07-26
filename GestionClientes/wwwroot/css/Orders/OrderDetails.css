@@ -1,0 +1,288 @@
+﻿.order-modal {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    width: 880px;
+    gap: 15px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.order-modal header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-modal header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.order-modal .btn-close {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--red-color);
+    padding: 8px 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-modal .btn-close:hover {
+    background: var(--red-color-dark);
+}
+
+.order-modal .controls-section {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr 2fr;
+    gap: 20px;
+}
+
+.order-modal .controls-section #btn-new-product {
+    align-self: end;
+    padding: 4px 12px;
+}
+
+.order-modal .form-field {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 5px;
+}
+
+.order-modal .form-field label {
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    color: var(--black-color);
+}
+
+.order-modal .form-field input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background: var(--white-color);
+    padding: 5px 12px;
+    color: var(--primary-color-dark);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    outline: none;
+}
+
+.form-field .submitted:invalid {
+    border: 1px solid var(--red-color);
+    box-shadow: 0 0 0 2px #e98383;
+}
+
+.order-modal .form-field .select {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    color: var(--primary-color-dark);
+    cursor: pointer;
+    background: var(--white-color);
+}
+
+.order-modal .form-field input:focus{
+    box-shadow: 0 0 0 2px #faffd7;
+}
+
+.order-modal .form-field input:disabled,.order-modal .form-field .select:disabled {
+    border: none;
+    background: var(--gray-color-light);
+    color: var(--gray-text);
+}
+
+.order-modal .buttons-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-modal button {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 8px 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color-light);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: fit-content;
+    align-self: end;
+}
+
+.order-modal button:hover {
+    background: var(--primary-color-dark);
+}
+
+.products-section {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 10px;
+}
+
+.products-section .list-section {
+    display: grid;
+    gap: 5px;
+    grid-template-rows: min-content 240px;
+}
+
+.products-section .list-section .list-header {
+    display: grid;
+    padding: 7px 31px;
+    gap: 20px;
+    background-color: var(--primary-color-light);
+    border-radius: 4px;
+    width: 100%;
+    grid-template-columns: 2fr 6fr 2fr 3fr 1fr;
+    max-width: 1024px;
+}
+
+.products-section .list-section .list-header span {
+    font-size: 1.2rem;
+    font-weight: var(--extra-bold);
+    color: var(--primary-color-dark);
+    text-align: center;
+}
+
+.products-section .list-section .list-frame {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    overflow-y: auto;
+    min-height: 100%;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.products-list > li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr 3fr 1fr;
+    gap: 20px;
+    padding: 9px;
+    background: transparent;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.products-list > li:hover {
+    background: var(--primary-color-light);
+}
+
+.products-list input {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid var(--primary-color);
+    background: var(--white-color);
+    padding: 5px 12px;
+    color: var(--primary-color-dark);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    outline: none;
+}
+
+.products-list input:focus {
+    box-shadow: 0 0 0 2px #faffd7;
+}
+
+.products-list input:disabled {
+    border: none;
+    background: var(--gray-color-light);
+    color: var(--gray-text);
+}
+
+#quantity-controler {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    gap: 2px;
+    align-items: center;
+}
+
+#quantity-controler p {
+    text-align: center;
+    color: var(--primary-color-dark);
+    font-size: 1.8rem;
+    font-weight: var(--bold);
+}
+
+#quantity-controler .minus-icon, #quantity-controler .add-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.circle-div {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-content: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.products-list > li .cross-icon {
+    filter: var(--primary-filter-dark);
+    justify-self: center;
+}
+
+.total-section {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    width: 200px;
+    background: var(--gray-color-light);
+    padding: 10px;
+    border-radius: 8px;
+    justify-self: end;
+}
+
+.total-section > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#subtotal-label, #discount-label {
+    color: var(--primary-color-dark);
+    font-size: 1.2rem;
+    font-weight: var(--bold);
+}
+
+#subtotal-amount, #discount-amount {
+    color: var(--black-color);
+    font-size: 1.2rem;
+    font-weight: var(--bold);
+}
+
+#total-label {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: var(--bold);
+}
+
+#total-amount {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: var(--bold);
+}
+

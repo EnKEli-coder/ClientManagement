@@ -84,5 +84,17 @@ namespace GestionClientes.Controllers
 
             return PartialView("_ClientInfoModal", clientInfo);
         }
+
+        [HttpPost]
+        public async Task<ActionResult> ClientOrders([FromBody] ClientInfoParams param)
+        {
+            ClientOrdersModel clientOrders = new()
+            {
+                ClientId = param.ClientId,
+                ClientName = param.ClientName,
+                Orders = await OrderBusiness.GetClientOrders(param.ClientId)
+            };
+            return PartialView("_ClientOrders", clientOrders);
+        }
     }
 }

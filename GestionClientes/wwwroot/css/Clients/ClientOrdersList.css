@@ -4,3 +4,70 @@
     grid-template-rows: min-content min-content;
     gap: 20px;
 }
+
+#client-orders #list-section {
+    display: grid;
+    gap: 5px;
+    grid-template-rows: min-content 347px;
+}
+
+#list-section #list-header {
+    display: grid;
+    padding: 7px 22px;
+    gap: 4px;
+    background-color: var(--primary-color-light);
+    border-radius: 4px;
+    width: 100%;
+    grid-template-columns: 1fr repeat(4,2fr);
+    max-width: 1024px;
+}
+
+#list-section #list-header span {
+    font-size: 1.2rem;
+    font-weight: var(--extra-bold);
+    color: var(--primary-color-dark);
+    text-align: center;
+}
+
+#list-section #list-frame {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    overflow-y: auto;
+    min-height: 100%;
+}
+
+#order-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+#order-list > li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr repeat(4,2fr);
+    gap: 4px;
+    padding: 9px 0;
+    background: transparent;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#order-list > li:hover {
+    background: var(--primary-color-light);
+}
+
+#order-list > li > p {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: var(--bold);
+    color: var(--black-color);
+}
+
+#order-list > li:hover > p {
+    color: var(--primary-color-dark)
+}

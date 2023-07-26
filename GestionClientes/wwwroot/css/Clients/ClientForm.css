@@ -4,19 +4,6 @@
     gap: 20px;
 }
 
-/*#client-details-section {
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    column-gap: 20px;
-    row-gap: 10px;
-    grid-template-rows: repeat(4, min-content);
-    grid-template-areas:
-        "name name name name name no no type"
-        "dir dir dir dir dir dir dir dir"
-        "email email email email pass pass phone phone"
-        "note note note note note note note note";
-}*/
-
 #client-details-section #form {
     display: grid;
     grid-template-columns: repeat(8,1fr);

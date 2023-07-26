@@ -1,0 +1,105 @@
+﻿@using GestionClientesEntidades.Models;
+@model OrderDetailsModel
+
+@{
+    Layout = "../Shared/_Modal.cshtml";
+}
+    <div class="order-modal">
+        <header>
+            <h1>Nuevo Pedido</h1>
+            <button class="btn-close" onclick="@Model.CancelAction">
+                <span class="icon cross-icon"></span>
+                Cerrar
+            </button>
+        </header>
+        <section class="controls-section">
+            <div class="form-field" id="order-number">
+                <label id="number-label" for="number-input">Folio</label>
+                <input type="text" id="number-input" class="order-form-field">
+            </div>
+            <div class="form-field" id="client">
+                <label id="client-label" for="client-select">Tipo</label>
+                <select id="type-select" class="order-form-field select">
+                @if(Model.OrderState == "New")
+                {
+                    if(Model.ClientList != null)
+                    {
+                        foreach(var client in Model.ClientList)
+                        {
+                            <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                        }
+                    }
+                }
+                </select>
+            </div>
+            <div class="form-field" id="campaign">
+                <label id="campaign-label" for="campaign-input">Campaña</label>
+                <select id="campaign-select" class="order-form-field select">
+                    @for(var i = 1; i < 13; i++)
+                    {
+                        <option value="@i" selected>@i</option>
+                    }
+                </select>
+            </div>
+            <div class="form-field" id="state">
+                <label id="client-label" for="client-select">Estado del pedido</label>
+                <select id="type-select" class="order-form-field select">
+                    <option value="Pendiente" selected>Pendiente</option>
+                    <option value="Completado">Completado</option>
+                    <option value="Cancelado">Cancelado</option>
+                </select>
+            </div>
+            <button id="btn-new-product" onclick="addProductItem()">
+                <span class="icon add-icon"></span>
+                Añadir
+            </button>
+        </section>
+        <section class="products-section">
+            <div class="list-section">
+                <header class="list-header">
+                    <span>Clave</span>
+                    <span>Producto</span>
+                    <span>Cantidad</span>
+                    <span>Precio</span> 
+                    <span></span>
+                </header>
+                <div class="list-frame">
+                    <ul class="products-list">
+                    @if(Model.OrderState == "New")
+                    {
+                            <partial name="~/views/Orders/_NewProductItem.cshtml"></partial>
+                    }
+                    else
+                    {
+                        foreach(var product in Model.Products)
+                        {
+                            <partial name="~/views/Orders/_ProductItem.cshtml" model="product"></partial>
+                        }
+                    }
+                </ul>
+                </div>
+            </div>
+        </section>
+        <section class="buttons-section">
+            <button id="btn-save" onclick="@Model.SaveAction">
+                <span class="icon save-icon"></span>
+                Guardar
+            </button>
+            <div class="total-section">
+                <div>
+                    <p id="subtotal-label">Subtotal</p>
+                    <p id="subtotal-amount">$520.00</p>
+                </div>
+                <div>
+                    <p id="discount-label">Descuento</p>
+                    <p id="discount-amount">-$14.00</p>
+                </div>
+                <div>
+                    <p id="total-label">Total</p>
+                    <p id="total-amount">$506.00</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+

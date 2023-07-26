@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionClientesEntidades.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,6 @@ namespace GestionClientesEntidades.Dto
         public decimal Total { get; set; }
         public string? State { get; set; }
         public DateTime DateCreated { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }

@@ -1,8 +1,7 @@
 ﻿@model ClientOrdersModel
 
-
 <section id="client-orders">
-    <div id="orders-list">
+    <div id="list-section">
         <header id="list-header">
             <span>Folio</span>
             <span>Monto</span>
@@ -11,11 +10,22 @@
             <span>Estado</span>
         </header>
         <div id="list-frame">
-            a
+            @foreach (var order in Model.Orders)
+            {
+                <ul id="order-list">
+                    <li id="@order.ID">
+                        <p class="order-id">@order.OrderNumber</p>
+                        <p class="Amount">@string.Format("{0:C}", order.Total)</p>
+                        <p class="date">@order.DateCreated.ToString("dd/MM/yyyy")</p>
+                        <p class="campaing">Campaña @order.Campaign</p>
+                        <p class="state">@order.State</p>
+                    </li>
+                </ul>
+            }
         </div>
     </div>
     <div id="buttons-section">
-        <button id="btn-new-order" onclick="openNewOrder()">
+        <button id="btn-new-order" onclick="openNewOrder(@Model.ClientId, @Model.ClientName)">
             <span class="icon add-order-icon"></span>
             Nuevo pedido
         </button>

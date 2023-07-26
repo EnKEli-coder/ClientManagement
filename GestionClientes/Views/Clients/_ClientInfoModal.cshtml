@@ -27,14 +27,28 @@
             </button>
         </header>
         <nav>
-            <input type="radio" name="navigation" id="radio-details" checked />
-            <label class="btn-details" for="radio-details">
-                Detalles
-            </label>
-            <input type="radio" name="navigation" id="radio-history" />
-            <label class="btn-history" for="radio-history">
-                Historial de pedidos
-            </label>
+            @if (Model.Client != null)
+            {
+                <input type="radio" name="navigation" id="radio-details" checked onchange="renderClientDetails(@Model.Client.ID)"/>
+                <label class="btn-details" for="radio-details">
+                    Detalles
+                </label>
+                <input type="radio" name="navigation" id="radio-history" onchange="renderClientOrders(@Model.Client.ID,'@Model.Client.Name')" />
+                <label class="btn-history" for="radio-history">
+                    Historial de pedidos
+                </label>
+            }
+            else
+            {
+                <input type="radio" name="navigation" id="radio-details" onchange="renderClientDetails(@Model.ClientOrders.ClientId)" />
+                <label class="btn-details" for="radio-details">
+                    Detalles
+                </label>
+                <input type="radio" name="navigation" id="radio-history" checked onchange="renderClientOrders(@Model.ClientOrders.ClientId,'@Model.ClientOrders.ClientName')" />
+                <label class="btn-history" for="radio-history">
+                    Historial de pedidos
+                </label>
+            }
         </nav>
         <div class="content">
             @if (Model.Client != null)

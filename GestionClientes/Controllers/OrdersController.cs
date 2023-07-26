@@ -1,4 +1,5 @@
 ﻿using GestionClientes.Models;
+using GestionClientesEntidades.Models;
 using GestionClientesNegocio;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,19 @@ namespace GestionClientes.Controllers
                 Orders = await OrderBusiness.GetOrders()
             };
             return PartialView("Orders",orders);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> OpenNewOrder()
+        {
+            OrderDetailsModel order = new()
+            {
+                ClientList = await ClientBusiness.GetClients(),
+                OrderState = "New",
+                CancelAction = "cerrarModal()",
+                SaveAction = "saveNewOrder()"
+            };
+            return PartialView("_OrderDetails", order);
         }
     }
 }

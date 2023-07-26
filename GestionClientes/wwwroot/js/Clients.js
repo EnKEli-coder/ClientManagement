@@ -13,7 +13,7 @@ async function openClientInfo(clientId) {
     }
 }
 
-async function renderClientsDetails(clientId) {
+async function renderClientDetails(clientId) {
     let modalContent = document.querySelector(".client-info-modal .content")
     try {
         let response = await axios.post("/Clients/ClientDetails", {
@@ -69,7 +69,7 @@ async function updateClient(clientId, e) {
 }
 
 async function cancelEdit(clientId) {
-    await renderClientsDetails(clientId)
+    await renderClientDetails(clientId)
 }
 
 async function openNewClient() {
@@ -122,16 +122,32 @@ async function saveNewClient(e) {
     await showClientsModule()
 }
 
-async function openClientHistory(clientId, e) {
+async function openClientHistory(clientId, clientName, e) {
     e.stopPropagation()
     let container = document.querySelector(".container")
     try {
         let response = await axios.post("/Clients/ClientModalOrders", {
-            clientId: clientId
+            ClientId: clientId,
+            ClientName: clientName
         }, {
             header: { "Content-Type": "application/json" }
         })
         container.insertAdjacentHTML("beforeend", response.data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function renderClientOrders(clientId, clientName) {
+    let modalContent = document.querySelector(".client-info-modal .content")
+    try {
+        let response = await axios.post("/Clients/ClientOrders", {
+            ClientId: clientId,
+            ClientName: clientName
+        }, {
+            header: { "Content-Type": "application/json" }
+        })
+        modalContent.innerHTML = response.data
     } catch (error) {
         console.log(error)
     }

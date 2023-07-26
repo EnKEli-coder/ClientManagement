@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\Icons.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Orders\\OrderDetails.css",
+      "PackagePath": "staticwebassets\\css\\Orders\\OrderDetails.css"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\css\\Orders\\OrderList.css",
       "PackagePath": "staticwebassets\\css\\Orders\\OrderList.css"
     },
@@ -69,6 +73,10 @@
       "PackagePath": "staticwebassets\\images\\History.svg"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Minus.svg",
+      "PackagePath": "staticwebassets\\images\\Minus.svg"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\images\\Plus.svg",
       "PackagePath": "staticwebassets\\images\\Plus.svg"
     },
@@ -87,6 +95,10 @@
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\Orders.js",
       "PackagePath": "staticwebassets\\js\\Orders.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\ProductList.js",
+      "PackagePath": "staticwebassets\\js\\ProductList.js"
     },
     {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientes\\wwwroot\\js\\site.js",

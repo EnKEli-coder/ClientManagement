@@ -33,6 +33,13 @@
     filter: var(--primary-filter-light);
 }
 
+.minus-icon {
+    height: 24px;
+    width: 24px;
+    background-image: url(../images/Minus.svg);
+    filter: var(--primary-filter-light);
+}
+
 .add-order-icon{
     height: 24px;
     width: 24px;
