@@ -106,7 +106,7 @@ async function saveNewClient(e) {
 
     let response = await axios.post("/Clients/SaveNewClient", {
         ID: 0,
-        ConsultantID: consultantId == ""? null : consultantId,
+        ConsultantID: consultantId == "" ? null : consultantId,
         Name: name,
         ConsultantType: consultantType,
         Telephone: telephone,
