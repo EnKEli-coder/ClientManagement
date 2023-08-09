@@ -32,5 +32,11 @@ namespace GestionClientes.Controllers
             };
             return PartialView("_OrderDetails", order);
         }
+
+        [HttpPost]
+        public async Task<ActionResult> AddNewProduct()
+        {
+            return PartialView("_NewProductItem");
+        }
     }
 }

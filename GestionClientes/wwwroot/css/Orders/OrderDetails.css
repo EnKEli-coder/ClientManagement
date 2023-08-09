@@ -190,6 +190,10 @@
     background: var(--primary-color-light);
 }
 
+.products-list > li.focus {
+    background: var(--primary-color-light)
+}
+
 .products-list input {
     width: 100%;
     border-radius: 2px;
@@ -208,8 +212,9 @@
 
 .products-list input:disabled {
     border: none;
-    background: var(--gray-color-light);
+    background: transparent;
     color: var(--gray-text);
+    text-align: center;
 }
 
 #quantity-controler {
