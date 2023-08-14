@@ -12,6 +12,7 @@
                 Cerrar
             </button>
         </header>
+    <form name="order-form" id="order-form" onsubmit="@Model.SaveAction">
         <section class="controls-section">
             <div class="form-field" id="order-number">
                 <label id="number-label" for="number-input">Folio</label>
@@ -20,22 +21,22 @@
             <div class="form-field" id="client">
                 <label id="client-label" for="client-select">Cliente</label>
                 <select id="type-select" class="order-form-field select">
-                @if(Model.OrderState == "New")
-                {
-                    if(Model.ClientList != null)
+                    @if (Model.OrderState == "New")
                     {
-                        foreach(var client in Model.ClientList)
+                        if (Model.ClientList != null)
                         {
-                            <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                            foreach (var client in Model.ClientList)
+                            {
+                                <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                            }
                         }
                     }
-                }
                 </select>
             </div>
             <div class="form-field" id="campaign">
                 <label id="campaign-label" for="campaign-input">Campaña</label>
                 <select id="campaign-select" class="order-form-field select">
-                    @for(var i = 1; i < 13; i++)
+                    @for (var i = 1; i < 13; i++)
                     {
                         <option value="@i" selected>@i</option>
                     }
@@ -54,6 +55,7 @@
                 Añadir
             </button>
         </section>
+        </form>
         <section class="products-section">
             <div class="list-section">
                 <header class="list-header">
@@ -81,22 +83,22 @@
             </div>
         </section>
         <section class="buttons-section">
-            <button id="btn-save" onclick="@Model.SaveAction">
+            <button id="btn-save" type="submit" form="order-form">
                 <span class="icon save-icon"></span>
                 Guardar
             </button>
             <div class="total-section">
                 <div>
                     <p id="subtotal-label">Subtotal</p>
-                    <p id="subtotal-amount">$520.00</p>
+                    <p id="subtotal-amount">$0.00</p>
                 </div>
                 <div>
                     <p id="discount-label">Descuento</p>
-                    <p id="discount-amount">-$14.00</p>
+                    <p id="discount-amount">-$0.00</p>
                 </div>
                 <div>
                     <p id="total-label">Total</p>
-                    <p id="total-amount">$506.00</p>
+                    <p id="total-amount">$0.00</p>
                 </div>
             </div>
         </section>

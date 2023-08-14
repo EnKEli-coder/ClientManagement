@@ -30,12 +30,12 @@ namespace GestionClientesDatos.Data
 
             Order[] orders = new Order[]
             {
-                new Order{OrderNumber = 286, ClientID = 1, Campaign = 12, Total = 520.50m, State = "Pendiente"},
-                new Order{OrderNumber = 285, ClientID = 1, Campaign = 11, Total = 520.50m, State = "Pendiente"},
-                new Order{OrderNumber = 284, ClientID = 2, Campaign = 10, Total = 520.50m, State = "Pendiente"},
-                new Order{OrderNumber = 283, ClientID = 4, Campaign = 10, Total = 520.50m, State = "Pendiente"},
-                new Order{OrderNumber = 282, ClientID = 3, Campaign = 10, Total = 520.50m, State = "Pendiente"},
-                new Order{OrderNumber = 281, ClientID = 4, Campaign = 10, Total = 520.50m, State = "Pendiente"},
+                new Order{OrderNumber = 286, ClientID = 1, Campaign = 12, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m,  State = "Pendiente"},
+                new Order{OrderNumber = 285, ClientID = 1, Campaign = 11, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m, State = "Pendiente"},
+                new Order{OrderNumber = 284, ClientID = 2, Campaign = 10, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m, State = "Pendiente"},
+                new Order{OrderNumber = 283, ClientID = 4, Campaign = 10, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m, State = "Pendiente"},
+                new Order{OrderNumber = 282, ClientID = 3, Campaign = 10, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m, State = "Pendiente"},
+                new Order{OrderNumber = 281, ClientID = 4, Campaign = 10, Subtotal = 520.50m, Discount = 182.18m, Total = 338.32m, State = "Pendiente"},
             };
 
             context.Orders.AddRange(orders);

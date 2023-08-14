@@ -28,7 +28,7 @@ namespace GestionClientes.Controllers
                 ClientList = await ClientBusiness.GetClients(),
                 OrderState = "New",
                 CancelAction = "cerrarModal()",
-                SaveAction = "saveNewOrder()"
+                SaveAction = "saveNewOrder(event)"
             };
             return PartialView("_OrderDetails", order);
         }

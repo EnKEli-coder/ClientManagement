@@ -1,6 +1,6 @@
-﻿<li class="product-item" tabindex="0" onfocus="itemFocus(event)" onblur="itemBlur(event)">
-    <input type="text" id="key-input" class="product-input" disabled>
-    <input type="text" id="description-input" class="product-input" disabled>
+﻿<li class="product-item">
+    <input type="text" id="key-input" class="product-input" form="order-form" required>
+    <input type="text" id="description-input" class="product-input" form="order-form" required>
     <div id="quantity-controler">
         <div class="circle-div">
             <span class="icon minus-icon" onclick="quantitySustract()"></span>
@@ -10,7 +10,16 @@
             <span class="icon add-icon" onclick="quantityAdd()"></span>
         </div>
     </div>
-    <input type="number" id="price-input" class="product-input" disabled>
+    <div class="price-input-container">
+        $
+        <input 
+            type="number" 
+            id="price-input"
+            class="product-input" 
+            oninput="calcularTotal()"
+            form="order-form" 
+            required>
+    </div>
     <span class="icon cross-icon"></span>
 </li>
 

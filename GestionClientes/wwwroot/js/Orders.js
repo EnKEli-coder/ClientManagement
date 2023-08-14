@@ -16,6 +16,7 @@ function quantitySustract() {
     if (value > 1) {
         quantity.innerText = value - 1;
     }
+    calcularTotal()
 
 }
 
@@ -23,4 +24,10 @@ function quantityAdd() {
     let quantity = document.querySelector("#quantity")
     let value = parseInt(quantity.innerText)
     quantity.innerText = value + 1;
+    calcularTotal()
+}
+
+function saveNewOrder(e) {
+    e.preventDefault()
+    console.log("VENDIDOOO")
 }
