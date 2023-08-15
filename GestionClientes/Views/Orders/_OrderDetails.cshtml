@@ -12,49 +12,49 @@
                 Cerrar
             </button>
         </header>
-    <form name="order-form" id="order-form" onsubmit="@Model.SaveAction">
-        <section class="controls-section">
-            <div class="form-field" id="order-number">
-                <label id="number-label" for="number-input">Folio</label>
-                <input type="text" id="number-input" class="order-form-field">
-            </div>
-            <div class="form-field" id="client">
-                <label id="client-label" for="client-select">Cliente</label>
-                <select id="type-select" class="order-form-field select">
-                    @if (Model.OrderState == "New")
-                    {
-                        if (Model.ClientList != null)
+        <form name="order-form" id="order-form" onsubmit="@Model.SaveAction">
+            <section class="controls-section">
+                <div class="form-field" id="order-number">
+                    <label id="number-label" for="number-input">Folio</label>
+                    <input type="text" id="number-input" class="order-form-field">
+                </div>
+                <div class="form-field" id="client">
+                    <label id="client-label" for="client-select">Cliente</label>
+                    <select id="client-select" class="order-form-field select">
+                        @if (Model.OrderState == "New")
                         {
-                            foreach (var client in Model.ClientList)
+                            if (Model.ClientList != null)
                             {
-                                <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                                foreach (var client in Model.ClientList)
+                                {
+                                    <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                                }
                             }
                         }
-                    }
-                </select>
-            </div>
-            <div class="form-field" id="campaign">
-                <label id="campaign-label" for="campaign-input">Campaña</label>
-                <select id="campaign-select" class="order-form-field select">
-                    @for (var i = 1; i < 13; i++)
-                    {
-                        <option value="@i" selected>@i</option>
-                    }
-                </select>
-            </div>
-            <div class="form-field" id="state">
-                <label id="client-label" for="client-select">Estado del pedido</label>
-                <select id="type-select" class="order-form-field select">
-                    <option value="Pendiente" selected>Pendiente</option>
-                    <option value="Completado">Completado</option>
-                    <option value="Cancelado">Cancelado</option>
-                </select>
-            </div>
-            <button id="btn-new-product" onclick="addProductItem()">
-                <span class="icon add-icon"></span>
-                Añadir
-            </button>
-        </section>
+                    </select>
+                </div>
+                <div class="form-field" id="campaign">
+                    <label id="campaign-label" for="campaign-select">Campaña</label>
+                    <select id="campaign-select" class="order-form-field select">
+                        @for (var i = 1; i < 13; i++)
+                        {
+                            <option value="@i" selected>@i</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-field" id="state">
+                    <label id="state-label" for="state-select">Estado del pedido</label>
+                    <select id="state-select" class="order-form-field select">
+                        <option value="Pendiente" selected>Pendiente</option>
+                        <option value="Completado">Completado</option>
+                        <option value="Cancelado">Cancelado</option>
+                    </select>
+                </div>
+                <button type="button" id="btn-new-product" onclick="addProductItem()">
+                    <span class="icon add-icon"></span>
+                    Añadir
+                </button>
+            </section>
         </form>
         <section class="products-section">
             <div class="list-section">
@@ -83,7 +83,7 @@
             </div>
         </section>
         <section class="buttons-section">
-            <button id="btn-save" type="submit" form="order-form">
+            <button id="btn-save" type="submit" form="order-form" onclick="submitOrder()">
                 <span class="icon save-icon"></span>
                 Guardar
             </button>

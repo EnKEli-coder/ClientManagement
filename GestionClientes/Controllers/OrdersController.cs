@@ -28,14 +28,34 @@ namespace GestionClientes.Controllers
                 ClientList = await ClientBusiness.GetClients(),
                 OrderState = "New",
                 CancelAction = "cerrarModal()",
-                SaveAction = "saveNewOrder(event)"
+                SaveAction = "AddNewOrder(event)"
             };
             return PartialView("_OrderDetails", order);
         }
 
         [HttpPost]
+        public async Task<ActionResult> OpenOrderDetails(int id)
+        {
+            OrderDetailsModel order = new()
+            {
+                ClientList = await ClientBusiness.GetClients(),
+                OrderState = "New",
+                CancelAction = "cerrarModal()",
+                SaveAction = "AddNewOrder(event)"
+            };
+            return PartialView("_OrderDetails", order);
+
+
+            [HttpPost]
         public async Task<ActionResult> AddNewProduct()
         {
+            return PartialView("_NewProductItem");
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> AddNewOrder([FromBody] NewOrderModel order)
+        {
+            var papucho = order;
             return PartialView("_NewProductItem");
         }
     }
