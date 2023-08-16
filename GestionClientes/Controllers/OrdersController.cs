@@ -1,4 +1,5 @@
 ﻿using GestionClientes.Models;
+using GestionClientesEntidades.Dto;
 using GestionClientesEntidades.Models;
 using GestionClientesNegocio;
 using Microsoft.AspNetCore.Mvc;
@@ -34,17 +35,23 @@ namespace GestionClientes.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> OpenOrderDetails(int id)
+        public async Task<ActionResult> OpenOrderDetails([FromBody] OrderInfoParams o)
         {
+            OrderDTO orderDetails = await OrderBusiness.GetOrderDetails(o.OrderId);
+
             OrderDetailsModel order = new()
             {
-                ClientList = await ClientBusiness.GetClients(),
-                OrderState = "New",
+                ClientList = orderDetails.ClientList,
+                ClientId = orderDetails.ClientId,
+                ClientName = orderDetails.ClientName,
+                Order = orderDetails.Order,
+                Products = orderDetails.Products,
+                OrderState = orderDetails.Order.State,
                 CancelAction = "cerrarModal()",
-                SaveAction = "AddNewOrder(event)"
+                SaveAction = "updateOrder(event, "+orderDetails.Order.ID+")"
             };
             return PartialView("_OrderDetails", order);
-
+        }
 
             [HttpPost]
         public async Task<ActionResult> AddNewProduct()
@@ -55,8 +62,29 @@ namespace GestionClientes.Controllers
         [HttpPost]
         public async Task<ActionResult> AddNewOrder([FromBody] NewOrderModel order)
         {
-            var papucho = order;
-            return PartialView("_NewProductItem");
+            await OrderBusiness.AddNewOrder(order);
+            return new EmptyResult();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> UpdateOrder([FromBody] NewOrderModel order)
+        {
+            await OrderBusiness.UpdateOrder(order);
+            return new EmptyResult();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> OpenNewClientOrder([FromBody] ClientInfoParams client)
+        {
+            OrderDetailsModel order = new()
+            {
+                ClientList = await ClientBusiness.GetClients(),
+                ClientId = client.ClientId,
+                OrderState = "New",
+                CancelAction = "cerrarModal()",
+                SaveAction = "AddNewOrder(event)"
+            };
+            return PartialView("_OrderDetails", order);
         }
     }
 }

@@ -4,18 +4,28 @@
 @if(Model != null)
 {
     <li class="product-item" onfocus="itemFocus(event)" onblur="itemBlur(event)">
-        <input type="text" id="key-input" class="product-input" value="@Model.ProductKey" placeholder="Código">
-        <input type="text" id="description-input" class="product-input" value="@Model.ProductDescription" placeholder="Descripción">
+        <input type="text" id="key-input" class="product-input" value="@Model.ProductKey" form="order-form" placeholder="Código">
+        <input type="text" id="description-input" class="product-input" value="@Model.ProductDescription" form="order-form" placeholder="Descripción">
         <div id="quantity-controler">
             <div class="circle-div">
-                <span class="icon minus-icon" onclick="quantitySustract()"></span>
+                <span class="icon minus-icon" onclick="quantitySustract(event)"></span>
             </div>
             <p id="quantity">@Model.Quantity</p>
             <div class="circle-div">
-                <span class="icon add-icon" onclick="quantityAdd()"></span>
+                <span class="icon add-icon" onclick="quantityAdd(event)"></span>
             </div>
         </div>
-        <input type="number" id="price-input" class="product-input" value="@String.Format("{0,C}", Model.ProductPrice)">
+        <div class="price-input-container">
+            $
+            <input type="number"
+                   id="price-input"
+                   class="product-input"
+                   oninput="calcularTotal()"
+                   value="@Model.ProductPrice"
+                   form="order-form"
+                   step="any"
+                   required>
+        </div>
         <span class="icon cross-icon"></span>
     </li>
 }
