@@ -6,7 +6,12 @@
 }
     <div class="order-modal">
         <header>
-            <h1>Nuevo Pedido</h1>
+            @if (Model.Order != null)
+            {
+                <h1>Detalles Pedido</h1>
+            }else {
+                <h1>Nuevo Pedido</h1>
+            }
             <button class="btn-close" onclick="@Model.CancelAction">
                 <span class="icon cross-icon"></span>
                 Cerrar
@@ -16,21 +21,44 @@
             <section class="controls-section">
                 <div class="form-field" id="order-number">
                     <label id="number-label" for="number-input">Folio</label>
+                @if(Model.Order != null)
+                {
+                    <input type="text" id="number-input" class="order-form-field" value="@Model.Order.OrderNumber">
+                }
+                else
+                {
                     <input type="text" id="number-input" class="order-form-field">
+                }
+                
                 </div>
                 <div class="form-field" id="client">
                     <label id="client-label" for="client-select">Cliente</label>
                     <select id="client-select" class="order-form-field select">
-                        @if (Model.OrderState == "New")
+                        @if (Model.ClientList != null)
                         {
-                            if (Model.ClientList != null)
+                        if (Model.ClientId != null)
+                        {
+                            foreach (var client in Model.ClientList)
                             {
-                                foreach (var client in Model.ClientList)
+                                if(client.ID == Model.ClientId)
                                 {
                                     <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                                }else
+                                {
+                                    <option value="@client.ID">@client.ConsultantID @client.Name</option>
                                 }
                             }
                         }
+                        }else
+                        {
+                            foreach (var client in Model.ClientList)
+                            {
+
+                                <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                            }
+                        }
+                        }
+                        
                     </select>
                 </div>
                 <div class="form-field" id="campaign">
@@ -38,16 +66,59 @@
                     <select id="campaign-select" class="order-form-field select">
                         @for (var i = 1; i < 13; i++)
                         {
-                            <option value="@i" selected>@i</option>
+                            if(Model.Order != null)
+                            {
+                            if(i == Model.Order.Campaign)
+                            {
+                                <option value="@i" selected>@i</option>
+                            }else
+                            {
+                                <option value="@i">@i</option>
+                            }
+
+                            }else
+                            {
+                                <option value="@i" selected>@i</option>
+                            }
                         }
                     </select>
                 </div>
                 <div class="form-field" id="state">
                     <label id="state-label" for="state-select">Estado del pedido</label>
                     <select id="state-select" class="order-form-field select">
+                    @if(Model.OrderState != null)
+                    {
+                        if (Model.OrderState == "Pendiente")
+                        {
+                            <option value="Pendiente" selected>Pendiente</option>
+                        }
+                        else{
+                            <option value="Pendiente" >Pendiente</option>
+                        }
+
+                        if (Model.OrderState == "Completado")
+                        {
+                            <option value="Completado" selected>Completado</option>
+                        }
+                        else
+                        {
+                            <option value="Completado">Completado</option>
+                        }
+
+                        if (Model.OrderState == "Cancelado")
+                        {
+                            <option value="Cancelado" selected>Cancelado</option>
+                        }
+                        else
+                        {
+                            <option value="Cancelado">Cancelado</option>
+                        }
+                    }else
+                    {
                         <option value="Pendiente" selected>Pendiente</option>
                         <option value="Completado">Completado</option>
                         <option value="Cancelado">Cancelado</option>
+                    }
                     </select>
                 </div>
                 <button type="button" id="btn-new-product" onclick="addProductItem()">
@@ -67,7 +138,7 @@
                 </header>
                 <div class="list-frame">
                     <ul class="products-list">
-                    @if(Model.OrderState == "New")
+                    @if(Model.Products == null)
                     {
                             <partial name="~/views/Orders/_NewProductItem.cshtml"></partial>
                     }
@@ -88,19 +159,37 @@
                 Guardar
             </button>
             <div class="total-section">
-                <div>
-                    <p id="subtotal-label">Subtotal</p>
-                    <p id="subtotal-amount">$0.00</p>
-                </div>
-                <div>
-                    <p id="discount-label">Descuento</p>
-                    <p id="discount-amount">-$0.00</p>
-                </div>
-                <div>
-                    <p id="total-label">Total</p>
-                    <p id="total-amount">$0.00</p>
-                </div>
-            </div>
+                @if(Model.Order != null)
+                {
+                    <div>
+                        <p id="subtotal-label">Subtotal</p>
+                        <p id="subtotal-amount" data-value="@Model.Order.Subtotal">@string.Format("{0:C}", Model.Order.Subtotal)</p>
+                    </div>
+                    <div>
+                        <p id="discount-label">Descuento</p>
+                        <p id="discount-amount" data-value="@Model.Order.Discount">-@string.Format("{0:C}", Model.Order.Discount)</p>
+                    </div>
+                    <div>
+                        <p id="total-label">Total</p>
+                        <p id="total-amount" data-value="@Model.Order.Total">@string.Format("{0:C}", Model.Order.Total)</p>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <p id="subtotal-label">Subtotal</p>
+                        <p id="subtotal-amount">$0.00</p>
+                    </div>
+                    <div>
+                        <p id="discount-label">Descuento</p>
+                        <p id="discount-amount">-$0.00</p>
+                    </div>
+                    <div>
+                        <p id="total-label">Total</p>
+                        <p id="total-amount">$0.00</p>
+                    </div>
+                }
+        </div>
         </section>
     </div>
     

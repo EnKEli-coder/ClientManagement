@@ -1,4 +1,17 @@
 ﻿
+async function buscarClientes(e) {
+    var listContainer = document.querySelector(".clients-view #list-frame")
+    var delayTimer
+    var busqueda = e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    clearTimeout(delayTimer);
+    delayTimer = setTimeout(function () {
+        let response = await axios.post("/Clients/GetClientsList",
+            {
+                busqueda
+            })
+        listContainer.innerHTML = response.data;
+    }, 200);
+}
 async function openClientInfo(clientId) {
     let container = document.querySelector(".container")
     try {
