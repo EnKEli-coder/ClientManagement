@@ -44,7 +44,7 @@ namespace GestionClientes.Controllers
                 SaveAction = "AddNewOrder(event)"
             };
             return PartialView("_OrderDetails", order);
-
+        }
 
             [HttpPost]
         public async Task<ActionResult> AddNewProduct()
