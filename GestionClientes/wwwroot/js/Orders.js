@@ -1,4 +1,18 @@
 ﻿
+async function buscarOrdenes(e) {
+    var listContainer = document.querySelector(".orders-view #list-frame")
+    var delayTimer
+    var busqueda = e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    clearTimeout(delayTimer);
+    delayTimer = setTimeout(async function () {
+        let response = await axios.post("/Orders/GetOrdersList",
+            {
+                Busqueda: busqueda
+            })
+        listContainer.innerHTML = response.data;
+    }, 200);
+}
+
 async function openNewOrder() {
     let container = document.querySelector(".container")
     try {
@@ -211,4 +225,22 @@ async function updateOrder(e,id) {
 
     cerrarModal()
     await showOrdersModule();
+}
+
+function removeProduct(e) {
+    let item = e.currentTarget.parentNode
+    item.remove()
+    calcularTotal()
+    toggleSaveButton()
+}
+
+function toggleSaveButton() {
+    let btnSave = document.querySelector("#btn-save");
+    let products = document.querySelectorAll(".product-item")
+
+    if (products.length > 0) {
+        btnSave.disabled = false
+    } else {
+        btnSave.disabled = true
+    }
 }

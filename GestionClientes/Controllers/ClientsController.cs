@@ -29,10 +29,14 @@ namespace GestionClientes.Controllers
             return PartialView("Clients", clientsList);
         }
 
-        public async Task<ActionResult> GetClientsList()
+        public async Task<ActionResult> GetClientsList([FromBody]SearchParam texto)
         {
 
+            List<ClientList> clients = await ClientBusiness.GetClients(texto.Busqueda);
+            
+            return PartialView("_ClientList", clients);
         }
+
         [HttpPost]
         public async Task<ActionResult> ClientModalDetails([FromBody] ClientInfoParams param)
         {

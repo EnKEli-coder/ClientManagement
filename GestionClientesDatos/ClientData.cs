@@ -13,13 +13,17 @@ namespace GestionClientesDatos
     public static class ClientData
     {
 
-        public static async Task<List<ClientList>> GetClientListAsync()
+        public static async Task<List<ClientList>> GetClientListAsync(string busqueda)
         {
             List<ClientList> clients = new();
 
             using (var context = new ClientManagementContext())
             {
-                clients = await context.ClientsList.ToListAsync();
+                clients = await context.ClientsList.Where(x =>
+                    x.ConsultantID.ToString().Contains(busqueda) ||
+                    x.ConsultantType.Contains(busqueda) ||
+                    x.Name.Contains(busqueda)
+                    ).ToListAsync();
             }
 
             return clients;

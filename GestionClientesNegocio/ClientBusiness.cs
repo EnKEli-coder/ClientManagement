@@ -13,9 +13,9 @@ namespace GestionClientesNegocio
     public static class ClientBusiness
     {
 
-        public static async Task<List<ClientList>> GetClients()
+        public static async Task<List<ClientList>> GetClients(string busqueda = "")
         {
-            return await ClientData.GetClientListAsync();
+            return await ClientData.GetClientListAsync(busqueda);
         }
 
         public static async Task<Client> GetClientInfo(int clientId)

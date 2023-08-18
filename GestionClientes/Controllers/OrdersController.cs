@@ -21,6 +21,14 @@ namespace GestionClientes.Controllers
             return PartialView("Orders",orders);
         }
 
+        public async Task<ActionResult> GetOrdersList([FromBody] SearchParam texto)
+        {
+
+            List<OrderList> orders = await OrderBusiness.GetOrders(texto.Busqueda);
+
+            return PartialView("_OrderList", orders);
+        }
+
         [HttpPost]
         public async Task<ActionResult> OpenNewOrder()
         {

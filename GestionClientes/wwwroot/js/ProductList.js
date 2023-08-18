@@ -13,5 +13,7 @@ async function addProductItem() {
     } catch (error) {
         console.log(error)
     }
+
+    toggleSaveButton()
 }
 

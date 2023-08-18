@@ -36,19 +36,24 @@
                     <select id="client-select" class="order-form-field select">
                         @if (Model.ClientList != null)
                         {
-                        if (Model.ClientId != null)
-                        {
-                            foreach (var client in Model.ClientList)
+                            if (Model.ClientId != null)
                             {
-                                if(client.ID == Model.ClientId)
+                                foreach (var client in Model.ClientList)
                                 {
-                                    <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
-                                }else
-                                {
+                                    if(client.ID == Model.ClientId)
+                                    {
+                                        <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                                    }else
+                                    {
                                     <option value="@client.ID">@client.ConsultantID @client.Name</option>
                                 }
                             }
-                        }
+                            }else {
+                                foreach (var client in Model.ClientList)
+                                {
+                                    <option value="@client.ID" selected>@client.ConsultantID @client.Name</option>
+                                }
+                            }
                         }else
                         {
                             foreach (var client in Model.ClientList)

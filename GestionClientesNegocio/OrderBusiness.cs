@@ -14,9 +14,9 @@ namespace GestionClientesNegocio
 {
     public static class OrderBusiness
     {
-        public static async Task<List<OrderList>> GetOrders()
+        public static async Task<List<OrderList>> GetOrders(string busqueda = "")
         {
-            return await OrderData.GetOrders();
+            return await OrderData.GetOrders(busqueda);
         }
 
         public static async Task<List<Order>> GetClientOrders(int clientId)
@@ -32,7 +32,7 @@ namespace GestionClientesNegocio
         public static async Task<OrderDTO> GetOrderDetails(int id)
         { 
             OrderDTO orderDetails = new();
-            orderDetails.ClientList = await ClientData.GetClientListAsync();
+            orderDetails.ClientList = await ClientData.GetClientListAsync("");
             orderDetails.Order = await OrderData.GetOrderById(id);
             orderDetails.Products = await OrderData.GetProductsByOrder(id);
 
