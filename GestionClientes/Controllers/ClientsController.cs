@@ -29,10 +29,6 @@ namespace GestionClientes.Controllers
             return PartialView("Clients", clientsList);
         }
 
-        public async Task<ActionResult> GetClientsList()
-        {
-
-        }
         [HttpPost]
         public async Task<ActionResult> ClientModalDetails([FromBody] ClientInfoParams param)
         {
