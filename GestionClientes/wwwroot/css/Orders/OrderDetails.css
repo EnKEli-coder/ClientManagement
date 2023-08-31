@@ -129,6 +129,15 @@
     align-self: end;
 }
 
+.order-modal button:disabled {
+    cursor: unset;
+    background: var(--gray-color);
+}
+
+.order-modal button:disabled:hover {
+    background: var(--gray-color);
+}
+
 .order-modal button:hover {
     background: var(--primary-color-dark);
 }

@@ -15,13 +15,18 @@ namespace GestionClientesDatos
 {
     public static class OrderData
     {
-        public static async Task<List<OrderList>> GetOrders()
+        public static async Task<List<OrderList>> GetOrders(string busqueda)
         {
             List<OrderList> orders = new();
 
             using(var context = new ClientManagementContext())
             {
-                orders = await context.OrdersList.ToListAsync();
+                orders = await context.OrdersList.Where(x => 
+                    x.OrderNumber.ToString().Contains(busqueda) ||
+                    x.Campaign.ToString().Contains(busqueda) ||
+                    x.State.Contains(busqueda) ||
+                    x.ClientName.Contains(busqueda)
+                ).ToListAsync();
             }
 
             return orders;

@@ -40,5 +40,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Clients}/{action=Clients}/{id?}");
+app.UseDeveloperExceptionPage();
 
 app.Run();

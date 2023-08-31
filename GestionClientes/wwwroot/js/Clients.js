@@ -4,14 +4,15 @@ async function buscarClientes(e) {
     var delayTimer
     var busqueda = e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     clearTimeout(delayTimer);
-    delayTimer = setTimeout(function () {
+    delayTimer = setTimeout(async function () {
         let response = await axios.post("/Clients/GetClientsList",
             {
-                busqueda
+                Busqueda: busqueda
             })
         listContainer.innerHTML = response.data;
     }, 200);
 }
+
 async function openClientInfo(clientId) {
     let container = document.querySelector(".container")
     try {
@@ -62,8 +63,8 @@ async function updateClient(clientId, e) {
     let observations = form.querySelector("#observations-textarea").value
     try {
         let response = await axios.post("/Clients/UpdateClient", {
-            ID: clientId,
-            ConsultantID: consultantId,
+            ID: Number(clientId),
+            ConsultantID: Number(consultantId),
             Name: name,
             ConsultantType: consultantType,
             Telephone: telephone,

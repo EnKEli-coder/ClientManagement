@@ -3224,19 +3224,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\OMAR\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj",
+      "projectUniqueName": "D:\\Repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj",
       "projectName": "GestionClientesEntidades",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesEntidades\\obj\\",
+      "projectPath": "D:\\Repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj",
+      "packagesPath": "C:\\Users\\OMAR\\.nuget\\packages\\",
+      "outputPath": "D:\\Repos\\ClientManagement\\GestionClientesEntidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3287,7 +3287,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
