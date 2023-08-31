@@ -18,6 +18,7 @@ namespace GestionClientesDatos.Data
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=sql5053.site4now.net;Database=db_a9dadc_clientsmanagement;Trusted_connection=false;User Id=db_a9dadc_clientsmanagement_admin;Password=Chocorrol2510@;MultipleActiveResultSets=true");
+            //options.UseSqlServer("Server=.\\SQLEXPRESS;Database=ClientsManagement;TrustServerCertificate=True;Integrated Security=False;User Id=ORomero;Password=Chocorrol2510@;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

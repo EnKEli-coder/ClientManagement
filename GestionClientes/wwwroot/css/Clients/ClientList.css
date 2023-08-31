@@ -4,6 +4,8 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    background: var(--primary-color);
+    gap: 1px;
 }
 
 #client-list > li {
@@ -11,11 +13,11 @@
     display: grid;
     grid-template-columns: 1fr 5fr 2fr 2fr 5fr;
     gap: 4px;
-    padding: 9px 0;
-    background: transparent;
-    border-radius: 4px;
+    padding: 9px 10px;
+    background: #fff;
     align-items: center;
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 #client-list > li:hover {
@@ -27,6 +29,7 @@
     font-size: 1.6rem;
     font-weight: var(--bold);
     color: var(--black-color);
+    transition: 0.2s color ease;
 }
 
 #client-list > li:hover > p {
@@ -52,6 +55,7 @@
     font-weight: var(--bold);
     color: var(--primary-color-light);
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 .client-controls > button:hover {

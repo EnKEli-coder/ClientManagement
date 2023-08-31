@@ -10,18 +10,21 @@
             <span>Estado</span>
         </header>
         <div id="list-frame">
+            <ul id="order-list">
             @foreach (var order in Model.Orders)
             {
-                <ul id="order-list">
                     <li id="@order.ID" onclick="showOrderDetails(@order.ID)">
                         <p class="order-id">@order.OrderNumber</p>
                         <p class="Amount">@string.Format("{0:C}", order.Total)</p>
                         <p class="date">@order.DateCreated.ToString("dd/MM/yyyy")</p>
                         <p class="campaing">Campaña @order.Campaign</p>
                         <p class="state">@order.State</p>
+                        <div class="delete-btn" onclick="deleteOrder(event, @order.ID)">
+                            <span class="icon delete-icon"></span>
+                        </div>
                     </li>
-                </ul>
             }
+            </ul>
         </div>
     </div>
     <div id="buttons-section">

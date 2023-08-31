@@ -26,7 +26,9 @@
             <span>Estado</span>
         </header>
         <div id="list-frame">
-            <partial name="~/Views/Orders/_OrderList.cshtml" for="@Model.Orders"/>
+            <ul id="order-list">
+                <partial name="~/Views/Orders/_OrderList.cshtml" for="@Model.Orders" />
+            </ul>
         </div>
     </section>
 </div>

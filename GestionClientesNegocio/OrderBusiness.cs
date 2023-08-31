@@ -48,5 +48,10 @@ namespace GestionClientesNegocio
         {
            await OrderData.UpdateOrder(order);
         }
+
+        public static async Task DeleteOrder(int id)
+        {
+            await OrderData.DeleteOrder(id);
+        }
     }
 }

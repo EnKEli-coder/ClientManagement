@@ -70,10 +70,11 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 .site-nav > button:hover {
-    background-color: var(--primary-color-dark);
+    background: var(--primary-color-dark);
 }
 
 .container {

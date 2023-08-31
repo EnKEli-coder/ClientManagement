@@ -21,11 +21,12 @@ namespace GestionClientesDatos
 
             using(var context = new ClientManagementContext())
             {
-                orders = await context.OrdersList.Where(x => 
+                orders = await context.OrdersList.Where(x => (
                     x.OrderNumber.ToString().Contains(busqueda) ||
                     x.Campaign.ToString().Contains(busqueda) ||
                     x.State.Contains(busqueda) ||
-                    x.ClientName.Contains(busqueda)
+                    x.ClientName.Contains(busqueda))
+                    && x.Active
                 ).ToListAsync();
             }
 
@@ -38,7 +39,7 @@ namespace GestionClientesDatos
 
             using (var context = new ClientManagementContext())
             {
-                orders = await context.Orders.Where(x => x.ClientID == clientId).ToListAsync();
+                orders = await context.Orders.Where(x => x.ClientID == clientId && x.Active).ToListAsync();
             }
 
             return orders;
@@ -50,7 +51,7 @@ namespace GestionClientesDatos
 
             using (var context = new ClientManagementContext())
             {
-                order = await context.Orders.Where(x => x.ID == id).FirstOrDefaultAsync();
+                order = await context.Orders.Where(x => x.ID == id && x.Active).FirstOrDefaultAsync();
             }
 
             return order;
@@ -62,7 +63,7 @@ namespace GestionClientesDatos
 
             using (var context = new ClientManagementContext())
             {
-                order = await context.OrdersList.Where(x => x.ID == id).FirstOrDefaultAsync();
+                order = await context.OrdersList.Where(x => x.ID == id && x.Active).FirstOrDefaultAsync();
             }
 
             return order;
@@ -150,6 +151,16 @@ namespace GestionClientesDatos
                 }
                 context.SaveChanges();
                 transaction.Commit();
+            }
+        }
+
+        public static async Task DeleteOrder(int id)
+        {
+            using(var context = new ClientManagementContext())
+            {
+                Order orden = await context.Orders.Where(x => x.ID == id).FirstOrDefaultAsync();
+                orden.Active = false;
+                context.SaveChanges();
             }
         }
     }

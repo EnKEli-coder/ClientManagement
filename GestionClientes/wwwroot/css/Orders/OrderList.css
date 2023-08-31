@@ -4,17 +4,19 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    background: var(--primary-color);
+    gap: 1px;
 }
 
 #order-list > li {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 4fr repeat(4,2fr);
+    grid-template-columns: 1fr 4fr repeat(4,2fr) 26px;
     gap: 4px;
-    padding: 9px 0;
-    background: transparent;
-    border-radius: 4px;
+    padding: 9px 10px;
     align-items: center;
+    background: #fff;
+    transition: 0.2s all ease;
     cursor: pointer;
 }
 
@@ -31,6 +33,21 @@
 
 #order-list > li:hover > p {
     color: var(--primary-color-dark)
+}
+
+#order-list .delete-btn {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-content: center;
+    border-radius: 13px;
+    background: var(--primary-color);
+    transition: 0.2s all ease;
+    cursor: pointer;
+}
+
+#order-list .delete-btn:hover {
+    background: var(--primary-color-dark)
 }
 
 .order-controls {
@@ -52,6 +69,7 @@
     font-weight: var(--bold);
     color: var(--primary-color-light);
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 .order-controls > button:hover {

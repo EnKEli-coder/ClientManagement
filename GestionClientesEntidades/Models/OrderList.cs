@@ -15,6 +15,7 @@ namespace GestionClientesEntidades.Models
         public decimal Total { get; set; }
         public string? State { get; set; }
         public DateTime DateCreated { get; set; }
+        public bool Active { get; set; }
         public string? ClientName { get; set; }
     }
 }

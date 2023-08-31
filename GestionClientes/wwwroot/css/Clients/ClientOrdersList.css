@@ -13,12 +13,12 @@
 
 #list-section #list-header {
     display: grid;
-    padding: 7px 22px;
+    padding: 7px 32px;
     gap: 4px;
     background-color: var(--primary-color-light);
     border-radius: 4px;
     width: 100%;
-    grid-template-columns: 1fr repeat(4,2fr);
+    grid-template-columns: 1fr repeat(4,2fr) 26px;
     max-width: 1024px;
 }
 
@@ -43,22 +43,39 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    background: var(--primary-color);
+    gap: 1px;
 }
 
 #order-list > li {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr repeat(4,2fr);
+    grid-template-columns: 1fr repeat(4,2fr) 26px;
     gap: 4px;
-    padding: 9px 0;
-    background: transparent;
-    border-radius: 4px;
+    padding: 9px 10px;
+    background: #fff;
     align-items: center;
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 #order-list > li:hover {
     background: var(--primary-color-light);
+}
+
+#order-list .delete-btn {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-content: center;
+    border-radius: 13px;
+    background: var(--primary-color);
+    transition: 0.2s background ease;
+    cursor: pointer;
+}
+
+#order-list .delete-btn:hover {
+    background: var(--primary-color-dark)
 }
 
 #order-list > li > p {
@@ -66,6 +83,7 @@
     font-size: 1.6rem;
     font-weight: var(--bold);
     color: var(--black-color);
+    transition: 0.2s color ease;
 }
 
 #order-list > li:hover > p {

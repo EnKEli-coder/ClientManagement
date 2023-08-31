@@ -67,3 +67,10 @@
     background-image: url(../images/Save.svg);
     filter: var(--primary-filter-light);
 }
+
+.delete-icon {
+    height: 16px;
+    width: 12px;
+    background-image: url(../images/Trash.svg);
+    filter: var(--white-filter);
+}

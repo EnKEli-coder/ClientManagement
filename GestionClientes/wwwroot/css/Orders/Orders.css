@@ -52,6 +52,7 @@
     font-weight: var(--bold);
     padding: 8px 12px;
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 .orders-view #controls-section button:hover{
@@ -66,12 +67,12 @@
 
 #list-section #list-header {
     display: grid;
-    padding: 7px 22px;
+    padding: 7px 32px;
     gap: 4px;
     background-color: var(--primary-color-light);
     border-radius: 4px;
     width: 100%;
-    grid-template-columns: 1fr 4fr repeat(4,2fr);
+    grid-template-columns: 1fr 4fr repeat(4,2fr) 26px;
     max-width: 1024px;
 }
 

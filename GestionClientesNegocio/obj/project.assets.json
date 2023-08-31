@@ -3263,19 +3263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\OMAR\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\ClientManagement\\GestionClientesNegocio\\GestionClientesNegocio.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesNegocio\\GestionClientesNegocio.csproj",
       "projectName": "GestionClientesNegocio",
-      "projectPath": "D:\\Repos\\ClientManagement\\GestionClientesNegocio\\GestionClientesNegocio.csproj",
-      "packagesPath": "C:\\Users\\OMAR\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\ClientManagement\\GestionClientesNegocio\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesNegocio\\GestionClientesNegocio.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesNegocio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\OMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3289,11 +3289,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Repos\\ClientManagement\\GestionClientesDatos\\GestionClientesDatos.csproj": {
-              "projectPath": "D:\\Repos\\ClientManagement\\GestionClientesDatos\\GestionClientesDatos.csproj"
+            "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesDatos\\GestionClientesDatos.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesDatos\\GestionClientesDatos.csproj"
             },
-            "D:\\Repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj": {
-              "projectPath": "D:\\Repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj"
+            "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\ClientManagement\\GestionClientesEntidades\\GestionClientesEntidades.csproj"
             }
           }
         }
@@ -3323,7 +3323,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

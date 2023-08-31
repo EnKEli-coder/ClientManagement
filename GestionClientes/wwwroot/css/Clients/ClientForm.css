@@ -71,6 +71,7 @@
     font-size: 1.4rem;
     font-weight: var(--bold);
     outline: none;
+    transition: 0.2s all ease;
 }
 
 .form-field .submitted:invalid {
@@ -91,6 +92,7 @@
     font-weight: var(--bold);
     resize: none;
     outline: none;
+    transition: 0.2s all ease;
 }
 
 .form-field .select {
@@ -103,6 +105,7 @@
     color: var(--primary-color-dark);
     cursor: pointer;
     background: var(--white-color);
+    transition: 0.2s all ease;
 }
 
 .form-field input:focus, .form-field textarea:focus {
@@ -120,7 +123,7 @@
     justify-content: flex-end;
 }
 
-#buttons-section button{
+#buttons-section button {
     display: flex;
     gap: 6px;
     align-items: center;
@@ -133,6 +136,7 @@
     outline: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: 0.2s background ease;
 }
 
 #buttons-section button:hover {
@@ -141,6 +145,7 @@
 
 #buttons-section #btn-cancel {
     background: var(--red-color);
+    transition: 0.2s background ease;
 }
 
 #buttons-section #btn-cancel:hover {

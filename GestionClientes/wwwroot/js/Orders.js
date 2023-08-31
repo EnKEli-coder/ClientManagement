@@ -1,6 +1,6 @@
 ﻿
 async function buscarOrdenes(e) {
-    var listContainer = document.querySelector(".orders-view #list-frame")
+    var listContainer = document.querySelector(".orders-view #order-list")
     var delayTimer
     var busqueda = e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     clearTimeout(delayTimer);
@@ -242,5 +242,19 @@ function toggleSaveButton() {
         btnSave.disabled = false
     } else {
         btnSave.disabled = true
+    }
+}
+
+async function deleteOrder(e, id) {
+    e.stopPropagation()
+    let li = e.currentTarget.parentNode
+    try {
+        const response = await axios.post("/Orders/DeleteOrder", {
+            OrderId: id
+        })
+        
+        li.parentNode.removeChild(li)
+    } catch (error) {
+        console.log(error)
     }
 }

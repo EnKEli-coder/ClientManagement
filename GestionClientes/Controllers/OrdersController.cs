@@ -94,5 +94,13 @@ namespace GestionClientes.Controllers
             };
             return PartialView("_OrderDetails", order);
         }
+
+        [HttpPost] 
+
+        public async Task<ActionResult> DeleteOrder([FromBody] OrderInfoParams order)
+        {
+            await OrderBusiness.DeleteOrder(order.OrderId);
+            return new EmptyResult();
+        }
     }
 }
